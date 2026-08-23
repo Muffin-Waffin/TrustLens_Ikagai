@@ -1,0 +1,55 @@
+{
+  "video_id": "000",
+  "explanations": [
+    {
+      "frame_index": 300,
+      "timestamp_seconds": 12.0,
+      "score": 0.5581675171852112,
+      "heatmap_path": "outputs\\explanations\\000\\frame_000300_heatmap.jpg",
+      "overlay_path": "outputs\\explanations\\000\\frame_000300_overlay.jpg",
+      "original_path": "outputs\\explanations\\000\\frame_000300_original.jpg"
+    },
+    {
+      "frame_index": 276,
+      "timestamp_seconds": 11.04,
+      "score": 0.53831547498703,
+      "heatmap_path": "outputs\\explanations\\000\\frame_000276_heatmap.jpg",
+      "overlay_path": "outputs\\explanations\\000\\frame_000276_overlay.jpg",
+      "original_path": "outputs\\explanations\\000\\frame_000276_original.jpg"
+    },
+    {
+      "frame_index": 204,
+      "timestamp_seconds": 8.16,
+      "score": 0.5377219319343567,
+      "heatmap_path": "outputs\\explanations\\000\\frame_000204_heatmap.jpg",
+      "overlay_path": "outputs\\explanations\\000\\frame_000204_overlay.jpg",
+      "original_path": "outputs\\explanations\\000\\frame_000204_original.jpg"
+    },
+    {
+      "frame_index": 312,
+      "timestamp_seconds": 12.48,
+      "score": 0.5304981470108032,
+      "heatmap_path": "outputs\\explanations\\000\\frame_000312_heatmap.jpg",
+      "overlay_path": "outputs\\explanations\\000\\frame_000312_overlay.jpg",
+      "original_path": "outputs\\explanations\\000\\frame_000312_original.jpg"
+    },
+    {
+      "frame_index": 144,
+      "timestamp_seconds": 5.76,
+      "score": 0.5260956287384033,
+      "heatmap_path": "outputs\\explanations\\000\\frame_000144_heatmap.jpg",
+      "overlay_path": "outputs\\explanations\\000\\frame_000144_overlay.jpg",
+      "original_path": "outputs\\explanations\\000\\frame_000144_original.jpg"
+    },
+    {
+      "frame_index": 192,
+      "timestamp_seconds": 7.68,
+      "score": 0.5184320211410522,
+      "heatmap_path": "outputs\\explanations\\000\\frame_000192_heatmap.jpg",
+      "overlay_path": "outputs\\explanations\\000\\frame_000192_overlay.jpg",
+      "original_path": "outputs\\explanations\\000\\frame_000192_original.jpg"
+    }
+  ],
+  "method": "Grad-CAM",
+  "target_layer": "conv4.pointwise"
+}

@@ -1,0 +1,138 @@
+{
+  "case": {
+    "case_id": "SG-20260823-3403",
+    "filename": "000_003.mp4",
+    "sha256": "6e83d0e0c51a0f7cdf2db48f796617db43148b3390011555dfa758f2b7ab811b",
+    "size_bytes": 891837,
+    "analysis_timestamp": "2026-08-23T00:34:03.237251"
+  },
+  "video": {
+    "fps": 25.0,
+    "frame_count": 396,
+    "duration_seconds": 15.84,
+    "width": 640,
+    "height": 480,
+    "codec": "h264"
+  },
+  "model": {
+    "architecture": "Xception",
+    "checkpoint": "models/xception_best.pth",
+    "device": "cpu",
+    "input_size": 224,
+    "parameters": 20811050
+  },
+  "preprocessing": {
+    "sampled_frames": 33,
+    "faces_detected": 33,
+    "usable_face_frames": 33,
+    "face_coverage": 1.0,
+    "average_face_quality": 0.8931960259964972
+  },
+  "detection": {
+    "mean_score": 0.8948095079624292,
+    "median_score": 0.9252958297729492,
+    "max_score": 0.9864908456802368,
+    "std_score": 0.0860088942679891,
+    "raw_median_score": 0.9252958297729492,
+    "weighted_mean_score": 0.8951085030103595,
+    "weighted_median_score": 0.9252958297729492,
+    "weighted_std_score": 0.08582378351889311,
+    "min_frame_weight": 0.860662693977356,
+    "max_frame_weight": 0.9220381331443787,
+    "mean_frame_weight": 0.8931960259964972,
+    "frame_predictions": []
+  },
+  "evidence": {
+    "consistency": 0.8283524329622138,
+    "reliability": 0.9111243389874382,
+    "confidence": 0.8430595512697114
+  },
+  "decision": {
+    "verdict": "LIKELY_DEEPFAKE",
+    "reason_codes": [
+      "QUALITY_WEIGHTED_AGGREGATION",
+      "HIGH_MANIPULATION_SIGNAL",
+      "HIGH_CONSISTENCY",
+      "HIGH_FACE_COVERAGE",
+      "HIGH_FACE_QUALITY",
+      "BOUNDARY_ARTIFACT_EVIDENCE",
+      "FREQUENCY_ANOMALY_EVIDENCE",
+      "BLINK_NATURALNESS_MEASURED",
+      "IDENTITY_STABILITY_MEASURED",
+      "LOCALIZED_EVIDENCE",
+      "HIGH_RELIABILITY",
+      "EVIDENCE_CONFIDENCE_HIGH"
+    ]
+  },
+  "suspicious": {
+    "frames": [
+      {
+        "frame_index": 288,
+        "timestamp_seconds": 11.52,
+        "score": 0.9864908456802368,
+        "face_quality": 0.8990183019638062,
+        "weight": 0.8990183019638062,
+        "face_path": "outputs\\faces\\000_003\\frame_000288.jpg"
+      },
+      {
+        "frame_index": 36,
+        "timestamp_seconds": 1.44,
+        "score": 0.9834707379341125,
+        "face_quality": 0.9154231280088425,
+        "weight": 0.9154231280088425,
+        "face_path": "outputs\\faces\\000_003\\frame_000036.jpg"
+      },
+      {
+        "frame_index": 12,
+        "timestamp_seconds": 0.48,
+        "score": 0.9754524230957031,
+        "face_quality": 0.8900709867477417,
+        "weight": 0.8900709867477417,
+        "face_path": "outputs\\faces\\000_003\\frame_000012.jpg"
+      },
+      {
+        "frame_index": 180,
+        "timestamp_seconds": 7.2,
+        "score": 0.9726794958114624,
+        "face_quality": 0.8884070515632629,
+        "weight": 0.8884070515632629,
+        "face_path": "outputs\\faces\\000_003\\frame_000180.jpg"
+      },
+      {
+        "frame_index": 300,
+        "timestamp_seconds": 12.0,
+        "score": 0.9720208644866943,
+        "face_quality": 0.860662693977356,
+        "weight": 0.860662693977356,
+        "face_path": "outputs\\faces\\000_003\\frame_000300.jpg"
+      }
+    ],
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 15.36,
+        "duration": 15.36,
+        "frame_count": 31,
+        "peak_score": 0.9864908456802368,
+        "mean_score": 0.9094939635645959
+      }
+    ]
+  },
+  "explainability": {
+    "attributions": []
+  },
+  "robustness": {
+    "tests": [],
+    "overall_stability": 0
+  },
+  "limitations": [
+    "Analysis uses a single frame-level neural network detector.",
+    "No explicit frequency-domain analysis was performed.",
+    "No boundary artifact detection was performed.",
+    "No temporal consistency modeling (TCN) was applied.",
+    "No identity consistency verification was performed.",
+    "Evidence confidence is a transparent heuristic, not a calibrated probability.",
+    "Cross-dataset generalization has not been established.",
+    "Robustness testing covers only a limited set of common transformations."
+  ]
+}

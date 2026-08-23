@@ -1,0 +1,245 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SynthGuard Forensic Report - SG-20260823-3102</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; max-width: 1000px; margin: 0 auto; padding: 20px; background: #f8f9fa; }
+        .container { background: white; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 30px; }
+        h1 { color: #1a1a2e; border-bottom: 3px solid #e94560; padding-bottom: 10px; }
+        h2 { color: #16213e; border-left: 4px solid #e94560; padding-left: 15px; margin-top: 30px; }
+        h3 { color: #0f3460; }
+        .verdict { padding: 20px; border-radius: 8px; text-align: center; font-size: 28px; font-weight: bold; margin: 20px 0; }
+        .verdict.REAL { background: #d4edda; color: #155724; border: 2px solid #28a745; }
+        .verdict.INCONCLUSIVE { background: #fff3cd; color: #856404; border: 2px solid #ffc107; }
+        .verdict.LIKELY_DEEPFAKE { background: #f8d7da; color: #721c24; border: 2px solid #dc3545; }
+        .metric-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 20px 0; }
+        .metric-card { background: #f8f9fa; border-radius: 8px; padding: 20px; text-align: center; }
+        .metric-value { font-size: 32px; font-weight: bold; color: #1a1a2e; }
+        .metric-label { font-size: 14px; color: #6c757d; text-transform: uppercase; letter-spacing: 1px; }
+        .section { margin: 25px 0; }
+        .evidence-list { list-style: none; padding: 0; }
+        .evidence-list li { padding: 10px 15px; background: #f8f9fa; margin: 8px 0; border-radius: 4px; border-left: 3px solid #e94560; }
+        .image-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin: 20px 0; }
+        .image-card { background: #f8f9fa; border-radius: 8px; overflow: hidden; }
+        .image-card img { width: 100%; height: auto; display: block; }
+        .image-caption { padding: 10px; font-size: 13px; color: #6c757d; }
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #dee2e6; }
+        th { background: #1a1a2e; color: white; }
+        tr:hover { background: #f8f9fa; }
+        .badge { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; }
+        .badge-high { background: #f8d7da; color: #721c24; }
+        .badge-medium { background: #fff3cd; color: #856404; }
+        .badge-low { background: #d4edda; color: #155724; }
+        .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #dee2e6; color: #6c757d; font-size: 14px; }
+        .warning { background: #fff3cd; border: 1px solid #ffc107; border-radius: 4px; padding: 15px; margin: 20px 0; }
+        .unavailable { color: #6c757d; font-style: italic; }
+        .chart-row { display: flex; flex-wrap: wrap; gap: 15px; margin: 20px 0; }
+        .chart-box { flex: 1 1 320px; background: #f8f9fa; border-radius: 8px; padding: 15px; }
+        .chart-box svg { width: 100%; height: auto; display: block; }
+        .chart-caption { font-size: 13px; color: #6c757d; margin-top: 8px; }
+        .delta-note { background: #f8f9fa; border-left: 4px solid #16213e; padding: 12px 15px; margin: 15px 0; }
+        .narrative p { font-size: 15px; }
+        code { background: #eef1f6; padding: 2px 6px; border-radius: 4px; font-size: 12px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>SynthGuard Forensic Report</h1>
+        
+        <div class="section">
+            <h2>1. Case Information</h2>
+            <table>
+                <tr><th>Case ID</th><td>SG-20260823-3102</td></tr>
+                <tr><th>Analysis Date</th><td>2026-08-23 02:31:02</td></tr>
+                <tr><th>Video File</th><td>01_02__meeting_serious__YVGY8LOK.mp4</td></tr>
+                <tr><th>SHA-256</th><td><code>00b1565e2e0816e32f7b552bab09e1cec49b82d3550ef25bfa8c604d100f7c44</code></td></tr>
+                <tr><th>File Size</th><td>6.4 MB</td></tr>
+            </table>
+        </div>
+<div class="section">
+            <h2>2. Video Metadata</h2>
+            <table>
+                <tr><th>Resolution</th><td>unavailablexunavailable</td></tr>
+                <tr><th>Frame Rate</th><td>unavailable</td></tr>
+                <tr><th>Duration</th><td>unavailable</td></tr>
+                <tr><th>Total Frames</th><td>unavailable</td></tr>
+                <tr><th>Codec</th><td>unknown</td></tr>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>3. Detector Information</h2>
+            <table>
+                <tr><th>Model</th><td>xception</td></tr>
+                <tr><th>Architecture</th><td>Xception</td></tr>
+                <tr><th>Input Size</th><td>224x224</td></tr>
+                <tr><th>Device</th><td>cpu</td></tr>
+                <tr><th>Checkpoint</th><td>models/xception_best.pth</td></tr>
+                <tr><th>Parameters</th><td>20,811,050</td></tr>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>4. Detection Summary</h2>
+            <div class="metric-grid">
+                <div class="metric-card">
+                    <div class="metric-value">0.533</div>
+                    <div class="metric-label">Manipulation Score (Median)</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">0.403</div>
+                    <div class="metric-label">Evidence Confidence</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">0.756</div>
+                    <div class="metric-label">Evidence Reliability</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">0.828</div>
+                    <div class="metric-label">Frame Consistency</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">97.7%</div>
+                    <div class="metric-label">Face Coverage</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">0.473</div>
+                    <div class="metric-label">Avg Face Quality</div>
+                </div>
+            </div>
+            
+            <table>
+                <tr><th>Statistic</th><th>Value</th></tr>
+                <tr><td>Mean Score</td><td>0.525</td></tr>
+                <tr><td>Median Score</td><td>0.535</td></tr>
+                <tr><td>Max Score</td><td>0.695</td></tr>
+                <tr><td>Standard Deviation</td><td>0.084</td></tr>
+                <tr><td>Sampled Frames</td><td>87</td></tr>
+                <tr><td>Usable Face Frames</td><td>85</td></tr>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>5. Forensic Decision</h2>
+            <div class="verdict INCONCLUSIVE">INCONCLUSIVE</div>
+            
+            <h3>Decision Logic</h3>
+            <ul class="evidence-list">
+                <li>Evidence Confidence: 0.403 (threshold for DEEPFAKE: >=0.70)</li>
+                <li>Evidence Reliability: 0.756 (minimum for strong verdict: >=0.60)</li>
+                <li>Real threshold: <=0.35</li>
+            </ul>
+            
+        </div>
+
+        <div class="section">
+            <h2>6. Findings Narrative</h2>
+            <div class="narrative">
+                <p>The available evidence does not support a confident conclusion in either direction. The quality-weighted manipulation score is 0.53, with overall evidence confidence of 0.40. Raw median manipulation score was 0.535; the quality-weighted median was 0.533 (shift -0.001). Weighted mean was 0.523, weighted standard deviation was 0.086, and consistency was 0.828. Scores clustered tightly across the usable frames (weighted mean 0.52, weighted std 0.09), giving a consistency score of 0.83. A high proportion of sampled frames contained usable facial evidence. Evidence reliability was reduced because face quality was low. Boundary artifact evidence was measured at 0.329. Frequency anomaly evidence was measured at 0.000. Blink naturalness was measured at 0.352. Identity stability was measured at 0.862. Structured flags recorded during analysis: <code>QUALITY_WEIGHTED_AGGREGATION</code> <code>HIGH_CONSISTENCY</code> <code>HIGH_FACE_COVERAGE</code> <code>LOW_FACE_QUALITY</code> <code>BOUNDARY_ARTIFACT_EVIDENCE</code> <code>FREQUENCY_ANOMALY_EVIDENCE</code> <code>BLINK_NATURALNESS_MEASURED</code> <code>IDENTITY_STABILITY_MEASURED</code> <code>HIGH_RELIABILITY</code>.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>7. Raw vs Quality-Weighted Evidence</h2>
+            <table>
+                <tr><th>Statistic</th><th>Raw</th><th>Quality-weighted</th></tr>
+                <tr><td>Mean</td><td>0.525</td><td>0.523</td></tr>
+                <tr><td>Median</td><td>0.535</td><td>0.533</td></tr>
+                <tr><td>Standard deviation</td><td>0.084</td><td>0.086</td></tr>
+                <tr><td>Weighted median shift</td><td colspan="2">-0.001</td></tr>
+            </table>
+            <p>Frame weights: min 0.364, mean 0.473, max 0.555. The manipulation score reported above is the quality-weighted median.</p>
+            <div class="delta-note"><strong>Why these numbers differ:</strong> the quality-weighted median is essentially unchanged by quality weighting (delta -0.001). In other words, low-quality frames did not systematically carry higher or lower scores than high-quality ones in this video. Weights derive from per-frame face quality (detector confidence, face dominance, sharpness); this video averaged a frame weight of 0.47 on a 0&ndash;1 scale.</div>
+        </div>
+
+        <div class="section">
+            <h2>8. Frame Score Analysis</h2>
+            <div class="chart-row">
+                <div class="chart-box">
+                    <svg viewBox="0 0 800 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Per-frame manipulation scores; point size reflects face-quality weight"><line x1="52" y1="220.0" x2="785" y2="220.0" stroke="#dee2e6" stroke-width="1"/><text x="44" y="224.0" text-anchor="end" font-size="11" fill="#6c757d">0.00</text><line x1="52" y1="168.0" x2="785" y2="168.0" stroke="#dee2e6" stroke-width="1"/><text x="44" y="172.0" text-anchor="end" font-size="11" fill="#6c757d">0.25</text><line x1="52" y1="116.0" x2="785" y2="116.0" stroke="#dee2e6" stroke-width="1"/><text x="44" y="120.0" text-anchor="end" font-size="11" fill="#6c757d">0.50</text><line x1="52" y1="64.0" x2="785" y2="64.0" stroke="#dee2e6" stroke-width="1"/><text x="44" y="68.0" text-anchor="end" font-size="11" fill="#6c757d">0.75</text><line x1="52" y1="12.0" x2="785" y2="12.0" stroke="#dee2e6" stroke-width="1"/><text x="44" y="16.0" text-anchor="end" font-size="11" fill="#6c757d">1.00</text><line x1="52" y1="12" x2="52" y2="220" stroke="#16213e" stroke-width="1"/><line x1="52" y1="220" x2="785" y2="220" stroke="#16213e" stroke-width="1"/><circle cx="52.0" cy="105.5" r="6.8" fill="#e94560" fill-opacity="0.61"><title>0.5s score 0.551 weight 0.55</title></circle><circle cx="60.6" cy="143.0" r="6.7" fill="#e94560" fill-opacity="0.59"><title>1.0s score 0.370 weight 0.53</title></circle><circle cx="69.2" cy="131.0" r="6.6" fill="#e94560" fill-opacity="0.59"><title>1.5s score 0.428 weight 0.52</title></circle><circle cx="77.9" cy="117.7" r="6.5" fill="#e94560" fill-opacity="0.58"><title>2.0s score 0.492 weight 0.50</title></circle><circle cx="86.5" cy="145.1" r="6.7" fill="#e94560" fill-opacity="0.59"><title>2.5s score 0.360 weight 0.52</title></circle><circle cx="95.1" cy="113.8" r="5.8" fill="#e94560" fill-opacity="0.51"><title>3.0s score 0.510 weight 0.40</title></circle><circle cx="103.7" cy="114.3" r="5.7" fill="#e94560" fill-opacity="0.51"><title>3.5s score 0.508 weight 0.39</title></circle><circle cx="112.4" cy="113.8" r="5.7" fill="#e94560" fill-opacity="0.50"><title>4.0s score 0.510 weight 0.39</title></circle><circle cx="121.0" cy="105.3" r="5.8" fill="#e94560" fill-opacity="0.51"><title>4.5s score 0.551 weight 0.39</title></circle><circle cx="129.6" cy="98.8" r="5.7" fill="#e94560" fill-opacity="0.51"><title>5.0s score 0.583 weight 0.39</title></circle><circle cx="138.2" cy="87.7" r="6.4" fill="#e94560" fill-opacity="0.56"><title>5.5s score 0.636 weight 0.48</title></circle><circle cx="146.9" cy="108.5" r="5.8" fill="#e94560" fill-opacity="0.51"><title>6.0s score 0.536 weight 0.40</title></circle><circle cx="155.5" cy="102.6" r="5.7" fill="#e94560" fill-opacity="0.50"><title>6.5s score 0.564 weight 0.39</title></circle><circle cx="164.1" cy="105.8" r="6.0" fill="#e94560" fill-opacity="0.53"><title>7.0s score 0.549 weight 0.43</title></circle><circle cx="172.7" cy="129.3" r="6.5" fill="#e94560" fill-opacity="0.57"><title>7.5s score 0.436 weight 0.50</title></circle><circle cx="181.4" cy="151.1" r="6.6" fill="#e94560" fill-opacity="0.58"><title>8.0s score 0.331 weight 0.51</title></circle><circle cx="190.0" cy="106.0" r="5.7" fill="#e94560" fill-opacity="0.50"><title>8.5s score 0.548 weight 0.39</title></circle><circle cx="198.6" cy="105.1" r="5.7" fill="#e94560" fill-opacity="0.50"><title>9.0s score 0.553 weight 0.39</title></circle><circle cx="207.2" cy="97.6" r="5.8" fill="#e94560" fill-opacity="0.51"><title>9.5s score 0.588 weight 0.39</title></circle><circle cx="215.8" cy="106.7" r="5.7" fill="#e94560" fill-opacity="0.50"><title>10.0s score 0.545 weight 0.39</title></circle><circle cx="224.5" cy="116.7" r="5.8" fill="#e94560" fill-opacity="0.51"><title>10.5s score 0.497 weight 0.40</title></circle><circle cx="233.1" cy="114.7" r="5.8" fill="#e94560" fill-opacity="0.51"><title>11.0s score 0.506 weight 0.40</title></circle><circle cx="241.7" cy="117.6" r="6.2" fill="#e94560" fill-opacity="0.55"><title>11.5s score 0.492 weight 0.46</title></circle><circle cx="250.3" cy="116.4" r="6.1" fill="#e94560" fill-opacity="0.54"><title>12.0s score 0.498 weight 0.45</title></circle><circle cx="259.0" cy="114.9" r="5.8" fill="#e94560" fill-opacity="0.51"><title>12.5s score 0.505 weight 0.40</title></circle><circle cx="267.6" cy="109.8" r="5.8" fill="#e94560" fill-opacity="0.51"><title>13.0s score 0.530 weight 0.40</title></circle><circle cx="276.2" cy="115.4" r="5.7" fill="#e94560" fill-opacity="0.50"><title>13.5s score 0.503 weight 0.39</title></circle><circle cx="284.8" cy="108.1" r="5.8" fill="#e94560" fill-opacity="0.51"><title>14.0s score 0.538 weight 0.40</title></circle><circle cx="293.5" cy="113.0" r="5.8" fill="#e94560" fill-opacity="0.51"><title>14.5s score 0.514 weight 0.40</title></circle><circle cx="302.1" cy="109.9" r="6.7" fill="#e94560" fill-opacity="0.59"><title>15.0s score 0.529 weight 0.52</title></circle><circle cx="310.7" cy="114.4" r="5.9" fill="#e94560" fill-opacity="0.52"><title>15.5s score 0.508 weight 0.42</title></circle><circle cx="319.3" cy="100.9" r="5.7" fill="#e94560" fill-opacity="0.50"><title>16.0s score 0.572 weight 0.39</title></circle><circle cx="328.0" cy="108.6" r="5.7" fill="#e94560" fill-opacity="0.50"><title>16.5s score 0.536 weight 0.39</title></circle><circle cx="336.6" cy="105.7" r="6.0" fill="#e94560" fill-opacity="0.53"><title>17.0s score 0.550 weight 0.43</title></circle><circle cx="345.2" cy="85.5" r="5.6" fill="#e94560" fill-opacity="0.49"><title>17.5s score 0.647 weight 0.37</title></circle><circle cx="353.8" cy="80.9" r="6.3" fill="#e94560" fill-opacity="0.56"><title>18.0s score 0.669 weight 0.47</title></circle><circle cx="362.4" cy="101.2" r="6.3" fill="#e94560" fill-opacity="0.56"><title>18.5s score 0.571 weight 0.48</title></circle><circle cx="371.1" cy="112.0" r="6.5" fill="#e94560" fill-opacity="0.58"><title>19.0s score 0.519 weight 0.50</title></circle><circle cx="388.3" cy="104.8" r="5.5" fill="#e94560" fill-opacity="0.49"><title>20.0s score 0.554 weight 0.36</title></circle><circle cx="396.9" cy="103.8" r="6.6" fill="#e94560" fill-opacity="0.58"><title>20.5s score 0.559 weight 0.52</title></circle><circle cx="405.6" cy="108.4" r="6.7" fill="#e94560" fill-opacity="0.59"><title>21.0s score 0.536 weight 0.53</title></circle><circle cx="414.2" cy="89.1" r="6.4" fill="#e94560" fill-opacity="0.57"><title>21.5s score 0.629 weight 0.49</title></circle><circle cx="422.8" cy="89.2" r="6.3" fill="#e94560" fill-opacity="0.56"><title>22.0s score 0.629 weight 0.47</title></circle><circle cx="431.4" cy="104.9" r="6.4" fill="#e94560" fill-opacity="0.57"><title>22.5s score 0.554 weight 0.49</title></circle><circle cx="440.1" cy="87.6" r="6.4" fill="#e94560" fill-opacity="0.57"><title>23.0s score 0.637 weight 0.49</title></circle><circle cx="448.7" cy="84.6" r="6.4" fill="#e94560" fill-opacity="0.57"><title>23.5s score 0.651 weight 0.49</title></circle><circle cx="457.3" cy="75.5" r="6.6" fill="#e94560" fill-opacity="0.58"><title>24.0s score 0.695 weight 0.51</title></circle><circle cx="465.9" cy="120.0" r="6.7" fill="#e94560" fill-opacity="0.59"><title>24.5s score 0.481 weight 0.53</title></circle><circle cx="474.6" cy="123.9" r="6.6" fill="#e94560" fill-opacity="0.59"><title>25.0s score 0.462 weight 0.52</title></circle><circle cx="483.2" cy="107.1" r="6.7" fill="#e94560" fill-opacity="0.59"><title>25.5s score 0.543 weight 0.53</title></circle><circle cx="491.8" cy="86.8" r="6.6" fill="#e94560" fill-opacity="0.58"><title>26.0s score 0.640 weight 0.51</title></circle><circle cx="500.4" cy="96.7" r="6.7" fill="#e94560" fill-opacity="0.59"><title>26.5s score 0.593 weight 0.52</title></circle><circle cx="509.0" cy="85.9" r="6.5" fill="#e94560" fill-opacity="0.57"><title>27.0s score 0.645 weight 0.50</title></circle><circle cx="517.7" cy="126.2" r="6.4" fill="#e94560" fill-opacity="0.56"><title>27.5s score 0.451 weight 0.48</title></circle><circle cx="526.3" cy="136.4" r="6.3" fill="#e94560" fill-opacity="0.56"><title>28.0s score 0.402 weight 0.48</title></circle><circle cx="534.9" cy="141.1" r="6.4" fill="#e94560" fill-opacity="0.56"><title>28.5s score 0.379 weight 0.48</title></circle><circle cx="543.5" cy="85.9" r="6.4" fill="#e94560" fill-opacity="0.56"><title>29.0s score 0.645 weight 0.48</title></circle><circle cx="552.2" cy="116.4" r="6.5" fill="#e94560" fill-opacity="0.58"><title>29.5s score 0.498 weight 0.51</title></circle><circle cx="560.8" cy="102.9" r="6.5" fill="#e94560" fill-opacity="0.58"><title>30.0s score 0.563 weight 0.50</title></circle><circle cx="569.4" cy="131.9" r="6.7" fill="#e94560" fill-opacity="0.59"><title>30.5s score 0.423 weight 0.52</title></circle><circle cx="578.0" cy="114.4" r="6.6" fill="#e94560" fill-opacity="0.58"><title>31.0s score 0.508 weight 0.51</title></circle><circle cx="586.7" cy="133.1" r="6.5" fill="#e94560" fill-opacity="0.57"><title>31.5s score 0.418 weight 0.50</title></circle><circle cx="595.3" cy="120.8" r="6.4" fill="#e94560" fill-opacity="0.57"><title>32.0s score 0.477 weight 0.49</title></circle><circle cx="603.9" cy="89.0" r="6.4" fill="#e94560" fill-opacity="0.57"><title>32.5s score 0.630 weight 0.49</title></circle><circle cx="612.5" cy="113.9" r="6.4" fill="#e94560" fill-opacity="0.57"><title>33.0s score 0.510 weight 0.49</title></circle><circle cx="621.2" cy="140.1" r="6.5" fill="#e94560" fill-opacity="0.58"><title>33.5s score 0.384 weight 0.50</title></circle><circle cx="629.8" cy="98.5" r="6.5" fill="#e94560" fill-opacity="0.57"><title>34.0s score 0.584 weight 0.50</title></circle><circle cx="638.4" cy="81.8" r="6.5" fill="#e94560" fill-opacity="0.57"><title>34.5s score 0.665 weight 0.50</title></circle><circle cx="647.0" cy="97.5" r="6.5" fill="#e94560" fill-opacity="0.57"><title>35.0s score 0.589 weight 0.50</title></circle><circle cx="655.6" cy="110.6" r="6.5" fill="#e94560" fill-opacity="0.58"><title>35.5s score 0.526 weight 0.50</title></circle><circle cx="664.3" cy="133.5" r="6.5" fill="#e94560" fill-opacity="0.57"><title>36.0s score 0.416 weight 0.50</title></circle><circle cx="672.9" cy="125.8" r="6.7" fill="#e94560" fill-opacity="0.59"><title>36.5s score 0.453 weight 0.53</title></circle><circle cx="681.5" cy="132.1" r="6.6" fill="#e94560" fill-opacity="0.59"><title>37.0s score 0.423 weight 0.52</title></circle><circle cx="690.1" cy="137.5" r="6.5" fill="#e94560" fill-opacity="0.58"><title>37.5s score 0.396 weight 0.50</title></circle><circle cx="698.8" cy="132.6" r="6.4" fill="#e94560" fill-opacity="0.57"><title>38.0s score 0.420 weight 0.49</title></circle><circle cx="707.4" cy="139.4" r="6.6" fill="#e94560" fill-opacity="0.59"><title>38.5s score 0.388 weight 0.52</title></circle><circle cx="716.0" cy="79.6" r="6.6" fill="#e94560" fill-opacity="0.58"><title>39.0s score 0.675 weight 0.51</title></circle><circle cx="724.6" cy="100.4" r="6.6" fill="#e94560" fill-opacity="0.59"><title>39.5s score 0.575 weight 0.52</title></circle><circle cx="733.3" cy="94.4" r="6.6" fill="#e94560" fill-opacity="0.58"><title>40.0s score 0.604 weight 0.51</title></circle><circle cx="741.9" cy="107.9" r="6.9" fill="#e94560" fill-opacity="0.61"><title>40.5s score 0.539 weight 0.55</title></circle><circle cx="750.5" cy="157.6" r="6.7" fill="#e94560" fill-opacity="0.59"><title>41.0s score 0.300 weight 0.52</title></circle><circle cx="759.1" cy="116.8" r="6.9" fill="#e94560" fill-opacity="0.61"><title>41.5s score 0.496 weight 0.55</title></circle><circle cx="767.8" cy="109.1" r="6.8" fill="#e94560" fill-opacity="0.61"><title>42.0s score 0.533 weight 0.55</title></circle><circle cx="776.4" cy="99.6" r="6.6" fill="#e94560" fill-opacity="0.58"><title>42.5s score 0.579 weight 0.51</title></circle><circle cx="785.0" cy="108.7" r="6.5" fill="#e94560" fill-opacity="0.57"><title>43.0s score 0.535 weight 0.50</title></circle><text x="52.0" y="238" text-anchor="middle" font-size="11" fill="#6c757d">0.5s</text><text x="418.5" y="238" text-anchor="middle" font-size="11" fill="#6c757d">21.8s</text><text x="785.0" y="238" text-anchor="middle" font-size="11" fill="#6c757d">43.0s</text></svg>
+                    <div class="chart-caption">Per-frame manipulation scores over time. Point size and opacity encode face-quality weight: large opaque points are sharp, confidently detected faces; faint small points are noisy frames that barely influence the aggregate.</div>
+                </div>
+                <div class="chart-box">
+                    <svg viewBox="0 0 420 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Distribution of per-frame manipulation scores"><rect x="126.0" y="210.9" width="38.0" height="9.1" fill="#16213e" fill-opacity="0.75"/><rect x="166.0" y="156.0" width="38.0" height="64.0" fill="#16213e" fill-opacity="0.75"/><rect x="206.0" y="28.0" width="38.0" height="192.0" fill="#16213e" fill-opacity="0.75"/><rect x="246.0" y="110.3" width="38.0" height="109.7" fill="#16213e" fill-opacity="0.75"/><rect x="286.0" y="206.3" width="38.0" height="13.7" fill="#16213e" fill-opacity="0.75"/><rect x="202.4" y="28" width="62.0" height="192" fill="#e94560" fill-opacity="0.10"/><line x1="233.4" y1="28" x2="233.4" y2="220" stroke="#e94560" stroke-width="2" stroke-dasharray="5,4"/><text x="49" y="42" font-size="11" fill="#6c757d">mean 0.52 &plusmn; 0.09</text><line x1="45" y1="28" x2="45" y2="220" stroke="#16213e" stroke-width="1"/><line x1="45" y1="220" x2="405" y2="220" stroke="#16213e" stroke-width="1"/><text x="45" y="238" text-anchor="middle" font-size="11" fill="#6c757d">0</text><text x="225.0" y="238" text-anchor="middle" font-size="11" fill="#6c757d">score</text><text x="405" y="238" text-anchor="middle" font-size="11" fill="#6c757d">1</text><text x="37" y="32" text-anchor="end" font-size="11" fill="#6c757d">42</text></svg>
+                    <div class="chart-caption">Distribution of usable-frame scores with weighted mean 0.52 &plusmn; weighted std 0.09. A narrow spread around the mean corresponds to high consistency (0.83).</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>9. Independent Forensic Signals</h2>
+            <table><tr><th>Signal</th><th>Measured value</th></tr><tr><td>Boundary Artifact</td><td>0.329</td></tr><tr><td>Frequency Anomaly</td><td>0.000</td></tr><tr><td>Blink Naturalness</td><td>0.352</td></tr><tr><td>Identity Stability</td><td>0.862</td></tr><tr><td>Robustness Stability</td><td>N/A (not measured)</td></tr></table>
+        </div>
+
+        <div class="section">
+            <h2>10. What Would Lower Our Confidence</h2>
+            <ul class="evidence-list"><li>Average face quality was poor (0.47 on a 0-1 scale); scores from blurry or small faces are less trustworthy.</li></ul>
+        </div>
+
+        <div class="section">
+            <h2>11. Suspicious Timeline</h2>
+            <p>Frame-level manipulation scores over time. Red shaded regions indicate suspicious intervals.</p>
+            
+            
+            <h3>Suspicious Segments</h3>
+            <p>No suspicious segments detected.</p>
+        </div>
+
+        <div class="section">
+            <h2>12. Top Suspicious Frames</h2>
+            <p>Frames with highest manipulation scores.</p>
+            <div class="image-grid">
+                <p>No suspicious frames above threshold.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>13. Model Attribution (Grad-CAM)</h2>
+            <p class="warning">
+                <strong>Note:</strong> Grad-CAM visualizations show which image regions influenced the model's prediction.
+                They are explanations of model behavior, <strong>not</strong> ground-truth evidence of manipulation artifacts.
+            </p>
+            <div class="image-grid">
+                <p>No Grad-CAM explanations generated.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>14. Robustness Testing</h2>
+            <p>Stability of the manipulation score under common video transformations.</p>
+            <table>
+                <tr><th>Transformation</th><th>Score</th><th>Difference</th><th>Stability</th></tr>
+                <tr><td colspan='4'>No robustness tests performed.</td></tr>
+            </table>
+            
+            <h3>Overall Robustness Stability: <span class="badge badge-low">0.00</span></h3>
+            <p>Robustness testing not performed.</p>
+            <p class="warning"><strong>Note:</strong> This measures score stability under the tested transformations only, not general model robustness.</p>
+        </div>
+
+        <div class="section">
+            <h2>15. Technical Details</h2>
+            <ul class="evidence-list">
+                <li>Analysis uses a single frame-level neural network detector (Xception).</li>
+                <li>No explicit frequency-domain analysis was performed.</li>
+                <li>No boundary artifact detection was performed.</li>
+                <li>No temporal consistency modeling (TCN) was applied.</li>
+                <li>No identity consistency verification was performed.</li>
+                <li>Evidence confidence is a transparent heuristic, <strong>not</strong> a calibrated probability.</li>
+                <li>Cross-dataset generalization has not been established.</li>
+                <li>Robustness testing covers only a limited set of common transformations.</li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <p>Generated by SynthGuard Phase 4 Prototype</p>
+            <p>Report ID: SG-20260823-3102 | 2026-08-23 02:31:02</p>
+            <p><strong>Disclaimer:</strong> This is a research prototype. Results should not be used as definitive evidence in legal or security contexts without independent verification.</p>
+        </div>
+    </div>
+</body>
+</html>

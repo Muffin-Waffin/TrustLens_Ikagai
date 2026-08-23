@@ -1,0 +1,225 @@
+{
+  "case": {
+    "case_id": "SG-20260823-5736",
+    "filename": "02_18__walk_down_hall_angry__B95S4G6F.mp4",
+    "sha256": "29ae66520a76297fb9202e7574e69be6d9946f0c1b0765fb4c3bfdd430a3ca51",
+    "size_bytes": 1565664,
+    "analysis_timestamp": "2026-08-23T00:57:36.705786"
+  },
+  "video": {
+    "fps": 24.0,
+    "frame_count": 227,
+    "duration_seconds": 9.458333333333334,
+    "width": 1920,
+    "height": 1080,
+    "codec": "h264"
+  },
+  "model": {
+    "architecture": "Xception",
+    "checkpoint": "models/xception_best.pth",
+    "device": "cpu",
+    "input_size": 224,
+    "parameters": 20811050
+  },
+  "preprocessing": {
+    "sampled_frames": 19,
+    "faces_detected": 19,
+    "usable_face_frames": 17,
+    "face_coverage": 0.8947368421052632,
+    "average_face_quality": 0.6194215325958945
+  },
+  "detection": {
+    "mean_score": 0.9314402972950655,
+    "median_score": 0.9590914249420166,
+    "max_score": 0.978195309638977,
+    "std_score": 0.06742754618090158,
+    "raw_median_score": 0.9590914249420166,
+    "weighted_mean_score": 0.9344013533769349,
+    "weighted_median_score": 0.9590914249420166,
+    "weighted_std_score": 0.06428280310949062,
+    "min_frame_weight": 0.5270310705052099,
+    "max_frame_weight": 0.6747699737103634,
+    "mean_frame_weight": 0.6194215325958945,
+    "frame_predictions": []
+  },
+  "evidence": {
+    "consistency": 0.8714343937810187,
+    "reliability": 0.7913857492797107,
+    "confidence": 0.7590112859554833
+  },
+  "decision": {
+    "verdict": "LIKELY_DEEPFAKE",
+    "reason_codes": [
+      "QUALITY_WEIGHTED_AGGREGATION",
+      "HIGH_MANIPULATION_SIGNAL",
+      "HIGH_CONSISTENCY",
+      "HIGH_FACE_COVERAGE",
+      "BOUNDARY_ARTIFACT_EVIDENCE",
+      "FREQUENCY_ANOMALY_EVIDENCE",
+      "BLINK_NATURALNESS_MEASURED",
+      "IDENTITY_STABILITY_MEASURED",
+      "ROBUSTNESS_STABILITY_MEASURED",
+      "LOCALIZED_EVIDENCE",
+      "HIGH_RELIABILITY",
+      "EVIDENCE_CONFIDENCE_HIGH"
+    ]
+  },
+  "suspicious": {
+    "frames": [
+      {
+        "frame_index": 120,
+        "timestamp_seconds": 5.0,
+        "score": 0.978195309638977,
+        "face_quality": 0.6427691689550565,
+        "weight": 0.6427691689550565,
+        "face_path": "outputs\\faces\\02_18__walk_down_hall_angry__B95S4G6F\\frame_000120.jpg"
+      },
+      {
+        "frame_index": 96,
+        "timestamp_seconds": 4.0,
+        "score": 0.973788321018219,
+        "face_quality": 0.640162059273752,
+        "weight": 0.640162059273752,
+        "face_path": "outputs\\faces\\02_18__walk_down_hall_angry__B95S4G6F\\frame_000096.jpg"
+      },
+      {
+        "frame_index": 84,
+        "timestamp_seconds": 3.5,
+        "score": 0.9734809398651123,
+        "face_quality": 0.6434512109113559,
+        "weight": 0.6434512109113559,
+        "face_path": "outputs\\faces\\02_18__walk_down_hall_angry__B95S4G6F\\frame_000084.jpg"
+      },
+      {
+        "frame_index": 168,
+        "timestamp_seconds": 7.0,
+        "score": 0.9695852398872375,
+        "face_quality": 0.6734484797513127,
+        "weight": 0.6734484797513127,
+        "face_path": "outputs\\faces\\02_18__walk_down_hall_angry__B95S4G6F\\frame_000168.jpg"
+      },
+      {
+        "frame_index": 180,
+        "timestamp_seconds": 7.5,
+        "score": 0.9627231359481812,
+        "face_quality": 0.667420868776448,
+        "weight": 0.667420868776448,
+        "face_path": "outputs\\faces\\02_18__walk_down_hall_angry__B95S4G6F\\frame_000180.jpg"
+      }
+    ],
+    "segments": [
+      {
+        "start": 1.0,
+        "end": 9.0,
+        "duration": 8.0,
+        "frame_count": 17,
+        "peak_score": 0.978195309638977,
+        "mean_score": 0.9314402972950655
+      }
+    ]
+  },
+  "explainability": {
+    "attributions": [
+      {
+        "frame_index": 120,
+        "timestamp_seconds": 5.0,
+        "score": 0.978195309638977,
+        "heatmap_path": "outputs\\explanations\\02_18__walk_down_hall_angry__B95S4G6F\\frame_000120_heatmap.jpg",
+        "overlay_path": "outputs\\explanations\\02_18__walk_down_hall_angry__B95S4G6F\\frame_000120_overlay.jpg",
+        "original_path": "outputs\\explanations\\02_18__walk_down_hall_angry__B95S4G6F\\frame_000120_original.jpg"
+      },
+      {
+        "frame_index": 96,
+        "timestamp_seconds": 4.0,
+        "score": 0.973788321018219,
+        "heatmap_path": "outputs\\explanations\\02_18__walk_down_hall_angry__B95S4G6F\\frame_000096_heatmap.jpg",
+        "overlay_path": "outputs\\explanations\\02_18__walk_down_hall_angry__B95S4G6F\\frame_000096_overlay.jpg",
+        "original_path": "outputs\\explanations\\02_18__walk_down_hall_angry__B95S4G6F\\frame_000096_original.jpg"
+      },
+      {
+        "frame_index": 84,
+        "timestamp_seconds": 3.5,
+        "score": 0.9734809398651123,
+        "heatmap_path": "outputs\\explanations\\02_18__walk_down_hall_angry__B95S4G6F\\frame_000084_heatmap.jpg",
+        "overlay_path": "outputs\\explanations\\02_18__walk_down_hall_angry__B95S4G6F\\frame_000084_overlay.jpg",
+        "original_path": "outputs\\explanations\\02_18__walk_down_hall_angry__B95S4G6F\\frame_000084_original.jpg"
+      },
+      {
+        "frame_index": 168,
+        "timestamp_seconds": 7.0,
+        "score": 0.9695852398872375,
+        "heatmap_path": "outputs\\explanations\\02_18__walk_down_hall_angry__B95S4G6F\\frame_000168_heatmap.jpg",
+        "overlay_path": "outputs\\explanations\\02_18__walk_down_hall_angry__B95S4G6F\\frame_000168_overlay.jpg",
+        "original_path": "outputs\\explanations\\02_18__walk_down_hall_angry__B95S4G6F\\frame_000168_original.jpg"
+      },
+      {
+        "frame_index": 180,
+        "timestamp_seconds": 7.5,
+        "score": 0.9627231359481812,
+        "heatmap_path": "outputs\\explanations\\02_18__walk_down_hall_angry__B95S4G6F\\frame_000180_heatmap.jpg",
+        "overlay_path": "outputs\\explanations\\02_18__walk_down_hall_angry__B95S4G6F\\frame_000180_overlay.jpg",
+        "original_path": "outputs\\explanations\\02_18__walk_down_hall_angry__B95S4G6F\\frame_000180_original.jpg"
+      },
+      {
+        "frame_index": 72,
+        "timestamp_seconds": 3.0,
+        "score": 0.9620687961578369,
+        "heatmap_path": "outputs\\explanations\\02_18__walk_down_hall_angry__B95S4G6F\\frame_000072_heatmap.jpg",
+        "overlay_path": "outputs\\explanations\\02_18__walk_down_hall_angry__B95S4G6F\\frame_000072_overlay.jpg",
+        "original_path": "outputs\\explanations\\02_18__walk_down_hall_angry__B95S4G6F\\frame_000072_original.jpg"
+      }
+    ]
+  },
+  "robustness": {
+    "tests": [
+      {
+        "transform": "resize",
+        "params": {
+          "scale": 0.75
+        },
+        "score": 0.9531126022338867,
+        "difference": 0.005978822708129883,
+        "stability": 0.9940211772918701
+      },
+      {
+        "transform": "blur",
+        "params": {
+          "kernel": 3,
+          "sigma": 0.8
+        },
+        "score": 0.9450270533561707,
+        "difference": 0.014064371585845947,
+        "stability": 0.985935628414154
+      },
+      {
+        "transform": "jpeg_compression",
+        "params": {
+          "quality": 75
+        },
+        "score": 0.8847697377204895,
+        "difference": 0.0743216872215271,
+        "stability": 0.9256783127784729
+      },
+      {
+        "transform": "brightness",
+        "params": {
+          "factor": 0.8
+        },
+        "score": 0.8790751695632935,
+        "difference": 0.08001625537872314,
+        "stability": 0.9199837446212769
+      }
+    ],
+    "overall_stability": 0.9564047157764435
+  },
+  "limitations": [
+    "Analysis uses a single frame-level neural network detector.",
+    "No explicit frequency-domain analysis was performed.",
+    "No boundary artifact detection was performed.",
+    "No temporal consistency modeling (TCN) was applied.",
+    "No identity consistency verification was performed.",
+    "Evidence confidence is a transparent heuristic, not a calibrated probability.",
+    "Cross-dataset generalization has not been established.",
+    "Robustness testing covers only a limited set of common transformations."
+  ]
+}

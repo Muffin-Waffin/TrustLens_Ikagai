@@ -1,0 +1,226 @@
+{
+  "case": {
+    "case_id": "SG-20260823-3428",
+    "filename": "01_02__talking_against_wall__YVGY8LOK.mp4",
+    "sha256": "3721e67674ed9b62636caf4c2ab00c63830fe68902248e6990cb0abd9795683c",
+    "size_bytes": 3471524,
+    "analysis_timestamp": "2026-08-23T03:34:28.868302"
+  },
+  "video": {
+    "fps": 24.0,
+    "frame_count": 841,
+    "duration_seconds": 35.041666666666664,
+    "width": 1920,
+    "height": 1080,
+    "codec": "h264"
+  },
+  "model": {
+    "architecture": "Xception",
+    "checkpoint": "models/xception_best.pth",
+    "device": "cpu",
+    "input_size": 224,
+    "parameters": 20811050
+  },
+  "preprocessing": {
+    "sampled_frames": 71,
+    "faces_detected": 71,
+    "usable_face_frames": 71,
+    "face_coverage": 1.0,
+    "average_face_quality": 0.7579276796654946
+  },
+  "detection": {
+    "mean_score": 0.865961276309591,
+    "median_score": 0.8815399408340454,
+    "max_score": 0.9587419033050537,
+    "std_score": 0.07506067905109653,
+    "raw_median_score": 0.8815399408340454,
+    "weighted_mean_score": 0.8667076728818606,
+    "weighted_median_score": 0.8815399408340454,
+    "weighted_std_score": 0.0744277710867186,
+    "min_frame_weight": 0.7122763374260945,
+    "max_frame_weight": 0.8028363100812891,
+    "mean_frame_weight": 0.7579276796654946,
+    "frame_predictions": []
+  },
+  "evidence": {
+    "consistency": 0.8511444578265628,
+    "reliability": 0.8706180252308919,
+    "confidence": 0.767484562451094
+  },
+  "decision": {
+    "verdict": "LIKELY_DEEPFAKE",
+    "reason_codes": [
+      "QUALITY_WEIGHTED_AGGREGATION",
+      "HIGH_MANIPULATION_SIGNAL",
+      "HIGH_CONSISTENCY",
+      "HIGH_FACE_COVERAGE",
+      "HIGH_FACE_QUALITY",
+      "BOUNDARY_ARTIFACT_EVIDENCE",
+      "FREQUENCY_ANOMALY_EVIDENCE",
+      "BLINK_NATURALNESS_MEASURED",
+      "IDENTITY_STABILITY_MEASURED",
+      "ROBUSTNESS_STABILITY_MEASURED",
+      "LOCALIZED_EVIDENCE",
+      "HIGH_RELIABILITY",
+      "EVIDENCE_CONFIDENCE_HIGH"
+    ]
+  },
+  "suspicious": {
+    "frames": [
+      {
+        "frame_index": 264,
+        "timestamp_seconds": 11.0,
+        "score": 0.9587419033050537,
+        "face_quality": 0.7361904625749978,
+        "weight": 0.7361904625749978,
+        "face_path": "outputs\\faces\\01_02__talking_against_wall__YVGY8LOK\\frame_000264.jpg"
+      },
+      {
+        "frame_index": 300,
+        "timestamp_seconds": 12.5,
+        "score": 0.9571285843849182,
+        "face_quality": 0.7404866645927978,
+        "weight": 0.7404866645927978,
+        "face_path": "outputs\\faces\\01_02__talking_against_wall__YVGY8LOK\\frame_000300.jpg"
+      },
+      {
+        "frame_index": 636,
+        "timestamp_seconds": 26.5,
+        "score": 0.9531641602516174,
+        "face_quality": 0.7738212608202273,
+        "weight": 0.7738212608202273,
+        "face_path": "outputs\\faces\\01_02__talking_against_wall__YVGY8LOK\\frame_000636.jpg"
+      },
+      {
+        "frame_index": 504,
+        "timestamp_seconds": 21.0,
+        "score": 0.9505020976066589,
+        "face_quality": 0.7831332829218423,
+        "weight": 0.7831332829218423,
+        "face_path": "outputs\\faces\\01_02__talking_against_wall__YVGY8LOK\\frame_000504.jpg"
+      },
+      {
+        "frame_index": 252,
+        "timestamp_seconds": 10.5,
+        "score": 0.9492133259773254,
+        "face_quality": 0.7579574177237475,
+        "weight": 0.7579574177237475,
+        "face_path": "outputs\\faces\\01_02__talking_against_wall__YVGY8LOK\\frame_000252.jpg"
+      }
+    ],
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 35.0,
+        "duration": 35.0,
+        "frame_count": 67,
+        "peak_score": 0.9587419033050537,
+        "mean_score": 0.8783240914344788
+      }
+    ]
+  },
+  "explainability": {
+    "attributions": [
+      {
+        "frame_index": 264,
+        "timestamp_seconds": 11.0,
+        "score": 0.9587419033050537,
+        "heatmap_path": "outputs\\explanations\\01_02__talking_against_wall__YVGY8LOK\\frame_000264_heatmap.jpg",
+        "overlay_path": "outputs\\explanations\\01_02__talking_against_wall__YVGY8LOK\\frame_000264_overlay.jpg",
+        "original_path": "outputs\\explanations\\01_02__talking_against_wall__YVGY8LOK\\frame_000264_original.jpg"
+      },
+      {
+        "frame_index": 300,
+        "timestamp_seconds": 12.5,
+        "score": 0.9571285843849182,
+        "heatmap_path": "outputs\\explanations\\01_02__talking_against_wall__YVGY8LOK\\frame_000300_heatmap.jpg",
+        "overlay_path": "outputs\\explanations\\01_02__talking_against_wall__YVGY8LOK\\frame_000300_overlay.jpg",
+        "original_path": "outputs\\explanations\\01_02__talking_against_wall__YVGY8LOK\\frame_000300_original.jpg"
+      },
+      {
+        "frame_index": 636,
+        "timestamp_seconds": 26.5,
+        "score": 0.9531641602516174,
+        "heatmap_path": "outputs\\explanations\\01_02__talking_against_wall__YVGY8LOK\\frame_000636_heatmap.jpg",
+        "overlay_path": "outputs\\explanations\\01_02__talking_against_wall__YVGY8LOK\\frame_000636_overlay.jpg",
+        "original_path": "outputs\\explanations\\01_02__talking_against_wall__YVGY8LOK\\frame_000636_original.jpg"
+      },
+      {
+        "frame_index": 504,
+        "timestamp_seconds": 21.0,
+        "score": 0.9505020976066589,
+        "heatmap_path": "outputs\\explanations\\01_02__talking_against_wall__YVGY8LOK\\frame_000504_heatmap.jpg",
+        "overlay_path": "outputs\\explanations\\01_02__talking_against_wall__YVGY8LOK\\frame_000504_overlay.jpg",
+        "original_path": "outputs\\explanations\\01_02__talking_against_wall__YVGY8LOK\\frame_000504_original.jpg"
+      },
+      {
+        "frame_index": 252,
+        "timestamp_seconds": 10.5,
+        "score": 0.9492133259773254,
+        "heatmap_path": "outputs\\explanations\\01_02__talking_against_wall__YVGY8LOK\\frame_000252_heatmap.jpg",
+        "overlay_path": "outputs\\explanations\\01_02__talking_against_wall__YVGY8LOK\\frame_000252_overlay.jpg",
+        "original_path": "outputs\\explanations\\01_02__talking_against_wall__YVGY8LOK\\frame_000252_original.jpg"
+      },
+      {
+        "frame_index": 276,
+        "timestamp_seconds": 11.5,
+        "score": 0.9469826221466064,
+        "heatmap_path": "outputs\\explanations\\01_02__talking_against_wall__YVGY8LOK\\frame_000276_heatmap.jpg",
+        "overlay_path": "outputs\\explanations\\01_02__talking_against_wall__YVGY8LOK\\frame_000276_overlay.jpg",
+        "original_path": "outputs\\explanations\\01_02__talking_against_wall__YVGY8LOK\\frame_000276_original.jpg"
+      }
+    ]
+  },
+  "robustness": {
+    "tests": [
+      {
+        "transform": "resize",
+        "params": {
+          "scale": 0.75
+        },
+        "score": 0.800582766532898,
+        "difference": 0.08095717430114746,
+        "stability": 0.9190428256988525
+      },
+      {
+        "transform": "blur",
+        "params": {
+          "kernel": 3,
+          "sigma": 0.8
+        },
+        "score": 0.7964379191398621,
+        "difference": 0.08510202169418335,
+        "stability": 0.9148979783058167
+      },
+      {
+        "transform": "jpeg_compression",
+        "params": {
+          "quality": 75
+        },
+        "score": 0.7228460907936096,
+        "difference": 0.1586938500404358,
+        "stability": 0.8413061499595642
+      },
+      {
+        "transform": "brightness",
+        "params": {
+          "factor": 0.8
+        },
+        "score": 0.8412032127380371,
+        "difference": 0.0403367280960083,
+        "stability": 0.9596632719039917
+      }
+    ],
+    "overall_stability": 0.9087275564670563
+  },
+  "limitations": [
+    "Analysis uses a single frame-level neural network detector.",
+    "No explicit frequency-domain analysis was performed.",
+    "No boundary artifact detection was performed.",
+    "No temporal consistency modeling (TCN) was applied.",
+    "No identity consistency verification was performed.",
+    "Evidence confidence is a transparent heuristic, not a calibrated probability.",
+    "Cross-dataset generalization has not been established.",
+    "Robustness testing covers only a limited set of common transformations."
+  ]
+}

@@ -1,0 +1,215 @@
+{
+  "case": {
+    "case_id": "SG-20260823-3604",
+    "filename": "mixkit-portrait-of-an-influencer-talking-to-the-camera-42323-hd-ready.mp4",
+    "sha256": "fe695c2ad1fadea1f5861eab839f33608183411e6c4d735cccd45d8967e7e8a6",
+    "size_bytes": 6617635,
+    "analysis_timestamp": "2026-08-23T01:36:04.478833"
+  },
+  "video": {
+    "fps": 23.976023976023978,
+    "frame_count": 404,
+    "duration_seconds": 16.850166666666667,
+    "width": 720,
+    "height": 1280,
+    "codec": "h264"
+  },
+  "model": {
+    "architecture": "Xception",
+    "checkpoint": "models/xception_best.pth",
+    "device": "cpu",
+    "input_size": 224,
+    "parameters": 20811050
+  },
+  "preprocessing": {
+    "sampled_frames": 34,
+    "faces_detected": 34,
+    "usable_face_frames": 34,
+    "face_coverage": 1.0,
+    "average_face_quality": 0.8992735848707312
+  },
+  "detection": {
+    "mean_score": 0.5722977194715949,
+    "median_score": 0.5434633791446686,
+    "max_score": 0.9236412048339844,
+    "std_score": 0.09580299890895819,
+    "raw_median_score": 0.5434633791446686,
+    "weighted_mean_score": 0.5716212620536572,
+    "weighted_median_score": 0.53825443983078,
+    "weighted_std_score": 0.09534017446920122,
+    "min_frame_weight": 0.8684421807527543,
+    "max_frame_weight": 0.9464176177978516,
+    "mean_frame_weight": 0.8992735848707312,
+    "frame_predictions": []
+  },
+  "evidence": {
+    "consistency": 0.8093196510615975,
+    "reliability": 0.9075416500232352,
+    "confidence": 0.48848832245635826
+  },
+  "decision": {
+    "verdict": "INCONCLUSIVE",
+    "reason_codes": [
+      "QUALITY_WEIGHTED_AGGREGATION",
+      "HIGH_CONSISTENCY",
+      "HIGH_FACE_COVERAGE",
+      "HIGH_FACE_QUALITY",
+      "BOUNDARY_ARTIFACT_EVIDENCE",
+      "FREQUENCY_ANOMALY_EVIDENCE",
+      "BLINK_NATURALNESS_MEASURED",
+      "IDENTITY_STABILITY_MEASURED",
+      "ROBUSTNESS_STABILITY_MEASURED",
+      "HIGH_RELIABILITY"
+    ]
+  },
+  "suspicious": {
+    "frames": [
+      {
+        "frame_index": 276,
+        "timestamp_seconds": 11.5115,
+        "score": 0.9236412048339844,
+        "face_quality": 0.873895674943924,
+        "weight": 0.873895674943924,
+        "face_path": "outputs\\faces\\mixkit-portrait-of-an-influencer-talking-to-the-camera-42323-hd-ready\\frame_000276.jpg"
+      },
+      {
+        "frame_index": 216,
+        "timestamp_seconds": 9.008999999999999,
+        "score": 0.7260183691978455,
+        "face_quality": 0.9089898049831391,
+        "weight": 0.9089898049831391,
+        "face_path": "outputs\\faces\\mixkit-portrait-of-an-influencer-talking-to-the-camera-42323-hd-ready\\frame_000216.jpg"
+      },
+      {
+        "frame_index": 264,
+        "timestamp_seconds": 11.011,
+        "score": 0.700843334197998,
+        "face_quality": 0.8810095906257629,
+        "weight": 0.8810095906257629,
+        "face_path": "outputs\\faces\\mixkit-portrait-of-an-influencer-talking-to-the-camera-42323-hd-ready\\frame_000264.jpg"
+      }
+    ],
+    "segments": [
+      {
+        "start": 9.008999999999999,
+        "end": 9.008999999999999,
+        "duration": 0.0,
+        "frame_count": 1,
+        "peak_score": 0.7260183691978455,
+        "mean_score": 0.7260183691978455
+      },
+      {
+        "start": 11.011,
+        "end": 11.5115,
+        "duration": 0.5005000000000006,
+        "frame_count": 2,
+        "peak_score": 0.9236412048339844,
+        "mean_score": 0.8122422695159912
+      }
+    ]
+  },
+  "explainability": {
+    "attributions": [
+      {
+        "frame_index": 276,
+        "timestamp_seconds": 11.5115,
+        "score": 0.9236412048339844,
+        "heatmap_path": "outputs\\explanations\\mixkit-portrait-of-an-influencer-talking-to-the-camera-42323-hd-ready\\frame_000276_heatmap.jpg",
+        "overlay_path": "outputs\\explanations\\mixkit-portrait-of-an-influencer-talking-to-the-camera-42323-hd-ready\\frame_000276_overlay.jpg",
+        "original_path": "outputs\\explanations\\mixkit-portrait-of-an-influencer-talking-to-the-camera-42323-hd-ready\\frame_000276_original.jpg"
+      },
+      {
+        "frame_index": 216,
+        "timestamp_seconds": 9.008999999999999,
+        "score": 0.7260183691978455,
+        "heatmap_path": "outputs\\explanations\\mixkit-portrait-of-an-influencer-talking-to-the-camera-42323-hd-ready\\frame_000216_heatmap.jpg",
+        "overlay_path": "outputs\\explanations\\mixkit-portrait-of-an-influencer-talking-to-the-camera-42323-hd-ready\\frame_000216_overlay.jpg",
+        "original_path": "outputs\\explanations\\mixkit-portrait-of-an-influencer-talking-to-the-camera-42323-hd-ready\\frame_000216_original.jpg"
+      },
+      {
+        "frame_index": 264,
+        "timestamp_seconds": 11.011,
+        "score": 0.700843334197998,
+        "heatmap_path": "outputs\\explanations\\mixkit-portrait-of-an-influencer-talking-to-the-camera-42323-hd-ready\\frame_000264_heatmap.jpg",
+        "overlay_path": "outputs\\explanations\\mixkit-portrait-of-an-influencer-talking-to-the-camera-42323-hd-ready\\frame_000264_overlay.jpg",
+        "original_path": "outputs\\explanations\\mixkit-portrait-of-an-influencer-talking-to-the-camera-42323-hd-ready\\frame_000264_original.jpg"
+      },
+      {
+        "frame_index": 288,
+        "timestamp_seconds": 12.011999999999999,
+        "score": 0.6998646259307861,
+        "heatmap_path": "outputs\\explanations\\mixkit-portrait-of-an-influencer-talking-to-the-camera-42323-hd-ready\\frame_000288_heatmap.jpg",
+        "overlay_path": "outputs\\explanations\\mixkit-portrait-of-an-influencer-talking-to-the-camera-42323-hd-ready\\frame_000288_overlay.jpg",
+        "original_path": "outputs\\explanations\\mixkit-portrait-of-an-influencer-talking-to-the-camera-42323-hd-ready\\frame_000288_original.jpg"
+      },
+      {
+        "frame_index": 84,
+        "timestamp_seconds": 3.5035,
+        "score": 0.6916349530220032,
+        "heatmap_path": "outputs\\explanations\\mixkit-portrait-of-an-influencer-talking-to-the-camera-42323-hd-ready\\frame_000084_heatmap.jpg",
+        "overlay_path": "outputs\\explanations\\mixkit-portrait-of-an-influencer-talking-to-the-camera-42323-hd-ready\\frame_000084_overlay.jpg",
+        "original_path": "outputs\\explanations\\mixkit-portrait-of-an-influencer-talking-to-the-camera-42323-hd-ready\\frame_000084_original.jpg"
+      },
+      {
+        "frame_index": 12,
+        "timestamp_seconds": 0.5005,
+        "score": 0.6775126457214355,
+        "heatmap_path": "outputs\\explanations\\mixkit-portrait-of-an-influencer-talking-to-the-camera-42323-hd-ready\\frame_000012_heatmap.jpg",
+        "overlay_path": "outputs\\explanations\\mixkit-portrait-of-an-influencer-talking-to-the-camera-42323-hd-ready\\frame_000012_overlay.jpg",
+        "original_path": "outputs\\explanations\\mixkit-portrait-of-an-influencer-talking-to-the-camera-42323-hd-ready\\frame_000012_original.jpg"
+      }
+    ]
+  },
+  "robustness": {
+    "tests": [
+      {
+        "transform": "resize",
+        "params": {
+          "scale": 0.75
+        },
+        "score": 0.5360357761383057,
+        "difference": 0.0022186636924743652,
+        "stability": 0.9977813363075256
+      },
+      {
+        "transform": "blur",
+        "params": {
+          "kernel": 3,
+          "sigma": 0.8
+        },
+        "score": 0.5262037515640259,
+        "difference": 0.01205068826675415,
+        "stability": 0.9879493117332458
+      },
+      {
+        "transform": "jpeg_compression",
+        "params": {
+          "quality": 75
+        },
+        "score": 0.5239753723144531,
+        "difference": 0.014279067516326904,
+        "stability": 0.9857209324836731
+      },
+      {
+        "transform": "brightness",
+        "params": {
+          "factor": 0.8
+        },
+        "score": 0.5419857501983643,
+        "difference": 0.0037313103675842285,
+        "stability": 0.9962686896324158
+      }
+    ],
+    "overall_stability": 0.9919300675392151
+  },
+  "limitations": [
+    "Analysis uses a single frame-level neural network detector.",
+    "No explicit frequency-domain analysis was performed.",
+    "No boundary artifact detection was performed.",
+    "No temporal consistency modeling (TCN) was applied.",
+    "No identity consistency verification was performed.",
+    "Evidence confidence is a transparent heuristic, not a calibrated probability.",
+    "Cross-dataset generalization has not been established.",
+    "Robustness testing covers only a limited set of common transformations."
+  ]
+}

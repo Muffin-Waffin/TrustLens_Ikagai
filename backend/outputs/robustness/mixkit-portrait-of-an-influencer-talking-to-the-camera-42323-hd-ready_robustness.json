@@ -1,0 +1,46 @@
+{
+  "video_id": "mixkit-portrait-of-an-influencer-talking-to-the-camera-42323-hd-ready",
+  "sha256": "fe695c2ad1fadea1f5861eab839f33608183411e6c4d735cccd45d8967e7e8a6",
+  "original_score": 0.53825443983078,
+  "tests": [
+    {
+      "transform": "resize",
+      "params": {
+        "scale": 0.75
+      },
+      "score": 0.5360357761383057,
+      "difference": 0.0022186636924743652,
+      "stability": 0.9977813363075256
+    },
+    {
+      "transform": "blur",
+      "params": {
+        "kernel": 3,
+        "sigma": 0.8
+      },
+      "score": 0.5262037515640259,
+      "difference": 0.01205068826675415,
+      "stability": 0.9879493117332458
+    },
+    {
+      "transform": "jpeg_compression",
+      "params": {
+        "quality": 75
+      },
+      "score": 0.5239753723144531,
+      "difference": 0.014279067516326904,
+      "stability": 0.9857209324836731
+    },
+    {
+      "transform": "brightness",
+      "params": {
+        "factor": 0.8
+      },
+      "score": 0.5419857501983643,
+      "difference": 0.0037313103675842285,
+      "stability": 0.9962686896324158
+    }
+  ],
+  "overall_stability": 0.9919300675392151,
+  "interpretation": "Evidence appears stable under tested transformations."
+}

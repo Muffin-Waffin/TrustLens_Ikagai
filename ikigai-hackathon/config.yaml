@@ -1,0 +1,135 @@
+dataset:
+  source: "huggingface"
+  name: "bitmind/FaceForensicsC23"
+  prototype:
+    real: 50
+    deepfakes: 50
+    face2face: 50
+    faceswap: 50
+    neuraltextures: 0
+  random_seed: 42
+
+sampling:
+  fps: 2.0
+  max_frames: 120
+
+face:
+  model: buffalo_s
+  min_confidence: 0.50
+  min_face_area_ratio: 0.01
+  expansion_ratio: 0.20
+
+image:
+  size: 224
+
+quality:
+  minimum_score: 0.35
+
+runtime:
+  prefer_cuda: true
+
+paths:
+  raw: "./data/raw"
+  subset: "./data/subset"
+  splits: "./data/splits"
+  processed: "./data/processed"
+  frames: "./outputs/frames"
+  faces: "./outputs/faces"
+  metadata: "./outputs/metadata"
+  forensic: "./outputs/forensic"
+  robustness: "./outputs/robustness"
+  explanations: "./outputs/explanations"
+  reports: "./outputs/reports"
+
+model:
+  name: "xception"
+  pretrained: false
+  image_size: 224
+  dropout: 0.0
+  num_classes: 2
+
+training:
+  batch_size: 16
+  epochs: 5
+  learning_rate: 0.0001
+  weight_decay: 0.0001
+  num_workers: 2
+  seed: 42
+  early_stopping_patience: 2
+
+inference:
+  batch_size: 16
+  threshold: 0.50
+  checkpoint: "models/xception_best.pth"
+
+forensic:
+  # Deprecated: consistency now uses weighted_std_score / 0.5 directly.
+  consistency_scale: 0.10
+  suspicious_frame_threshold: 0.70
+  max_gap_seconds: 1.5
+  top_k_frames: 5
+  min_usable_frames: 5
+
+  reliability:
+    coverage_weight: 0.35
+    quality_weight: 0.35
+    consistency_weight: 0.30
+
+  thresholds:
+    real_max: 0.35
+    deepfake_min: 0.70
+    strong_reliability_min: 0.60
+    boundary:
+      baseline: 12.0
+      scale: 60.0
+      band_width: 3
+      color_weight: 0.5
+    frequency:
+      baseline: 0.45
+      scale: 0.35
+      low_frequency_radius_ratio: 0.15
+    blink:
+      ear_closed: 0.20
+      minimum_observations: 3
+      expected_blinks: 1.0
+    identity_drift:
+      # Reserved for reporting/calibration; identity scores are cosine-derived.
+      stable_similarity: 0.85
+
+  visualization:
+    enabled: true
+    timeline_dpi: 150
+    contact_sheet_cols: 3
+
+explainability:
+  enabled: true
+  target_layer: "conv4.pointwise"
+  max_frames: 6
+  colormap: "jet"
+
+robustness:
+  enabled: true
+  transforms:
+    - name: "resize"
+      params:
+        scale: 0.75
+    - name: "blur"
+      params:
+        kernel: 3
+        sigma: 0.8
+    - name: "jpeg_compression"
+      params:
+        quality: 75
+    - name: "brightness"
+      params:
+        factor: 0.8
+  thresholds:
+    high: 0.85
+    medium: 0.65
+
+report:
+  case_id_prefix: "SG"
+  include_sha256: true
+  formats:
+    - "html"
+    - "json"

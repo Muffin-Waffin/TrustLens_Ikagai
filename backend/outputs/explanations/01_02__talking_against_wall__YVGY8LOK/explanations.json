@@ -1,0 +1,55 @@
+{
+  "video_id": "01_02__talking_against_wall__YVGY8LOK",
+  "explanations": [
+    {
+      "frame_index": 264,
+      "timestamp_seconds": 11.0,
+      "score": 0.9587419033050537,
+      "heatmap_path": "outputs\\explanations\\01_02__talking_against_wall__YVGY8LOK\\frame_000264_heatmap.jpg",
+      "overlay_path": "outputs\\explanations\\01_02__talking_against_wall__YVGY8LOK\\frame_000264_overlay.jpg",
+      "original_path": "outputs\\explanations\\01_02__talking_against_wall__YVGY8LOK\\frame_000264_original.jpg"
+    },
+    {
+      "frame_index": 300,
+      "timestamp_seconds": 12.5,
+      "score": 0.9571285843849182,
+      "heatmap_path": "outputs\\explanations\\01_02__talking_against_wall__YVGY8LOK\\frame_000300_heatmap.jpg",
+      "overlay_path": "outputs\\explanations\\01_02__talking_against_wall__YVGY8LOK\\frame_000300_overlay.jpg",
+      "original_path": "outputs\\explanations\\01_02__talking_against_wall__YVGY8LOK\\frame_000300_original.jpg"
+    },
+    {
+      "frame_index": 636,
+      "timestamp_seconds": 26.5,
+      "score": 0.9531641602516174,
+      "heatmap_path": "outputs\\explanations\\01_02__talking_against_wall__YVGY8LOK\\frame_000636_heatmap.jpg",
+      "overlay_path": "outputs\\explanations\\01_02__talking_against_wall__YVGY8LOK\\frame_000636_overlay.jpg",
+      "original_path": "outputs\\explanations\\01_02__talking_against_wall__YVGY8LOK\\frame_000636_original.jpg"
+    },
+    {
+      "frame_index": 504,
+      "timestamp_seconds": 21.0,
+      "score": 0.9505020976066589,
+      "heatmap_path": "outputs\\explanations\\01_02__talking_against_wall__YVGY8LOK\\frame_000504_heatmap.jpg",
+      "overlay_path": "outputs\\explanations\\01_02__talking_against_wall__YVGY8LOK\\frame_000504_overlay.jpg",
+      "original_path": "outputs\\explanations\\01_02__talking_against_wall__YVGY8LOK\\frame_000504_original.jpg"
+    },
+    {
+      "frame_index": 252,
+      "timestamp_seconds": 10.5,
+      "score": 0.9492133259773254,
+      "heatmap_path": "outputs\\explanations\\01_02__talking_against_wall__YVGY8LOK\\frame_000252_heatmap.jpg",
+      "overlay_path": "outputs\\explanations\\01_02__talking_against_wall__YVGY8LOK\\frame_000252_overlay.jpg",
+      "original_path": "outputs\\explanations\\01_02__talking_against_wall__YVGY8LOK\\frame_000252_original.jpg"
+    },
+    {
+      "frame_index": 276,
+      "timestamp_seconds": 11.5,
+      "score": 0.9469826221466064,
+      "heatmap_path": "outputs\\explanations\\01_02__talking_against_wall__YVGY8LOK\\frame_000276_heatmap.jpg",
+      "overlay_path": "outputs\\explanations\\01_02__talking_against_wall__YVGY8LOK\\frame_000276_overlay.jpg",
+      "original_path": "outputs\\explanations\\01_02__talking_against_wall__YVGY8LOK\\frame_000276_original.jpg"
+    }
+  ],
+  "method": "Grad-CAM",
+  "target_layer": "conv4.pointwise"
+}

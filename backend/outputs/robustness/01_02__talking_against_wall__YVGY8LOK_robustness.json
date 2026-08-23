@@ -1,0 +1,46 @@
+{
+  "video_id": "01_02__talking_against_wall__YVGY8LOK",
+  "sha256": "3721e67674ed9b62636caf4c2ab00c63830fe68902248e6990cb0abd9795683c",
+  "original_score": 0.8815399408340454,
+  "tests": [
+    {
+      "transform": "resize",
+      "params": {
+        "scale": 0.75
+      },
+      "score": 0.800582766532898,
+      "difference": 0.08095717430114746,
+      "stability": 0.9190428256988525
+    },
+    {
+      "transform": "blur",
+      "params": {
+        "kernel": 3,
+        "sigma": 0.8
+      },
+      "score": 0.7964379191398621,
+      "difference": 0.08510202169418335,
+      "stability": 0.9148979783058167
+    },
+    {
+      "transform": "jpeg_compression",
+      "params": {
+        "quality": 75
+      },
+      "score": 0.7228460907936096,
+      "difference": 0.1586938500404358,
+      "stability": 0.8413061499595642
+    },
+    {
+      "transform": "brightness",
+      "params": {
+        "factor": 0.8
+      },
+      "score": 0.8412032127380371,
+      "difference": 0.0403367280960083,
+      "stability": 0.9596632719039917
+    }
+  ],
+  "overall_stability": 0.9087275564670563,
+  "interpretation": "Evidence appears stable under tested transformations."
+}

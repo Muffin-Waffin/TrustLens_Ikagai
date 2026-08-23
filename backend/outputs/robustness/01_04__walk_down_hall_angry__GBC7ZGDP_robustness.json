@@ -1,0 +1,46 @@
+{
+  "video_id": "01_04__walk_down_hall_angry__GBC7ZGDP",
+  "sha256": "a2d8f0889bcdc37359914eaf6141db64b00c912387fcc9a768d4cf5f19151199",
+  "original_score": 0.9794831275939941,
+  "tests": [
+    {
+      "transform": "resize",
+      "params": {
+        "scale": 0.75
+      },
+      "score": 0.959909975528717,
+      "difference": 0.0195731520652771,
+      "stability": 0.9804268479347229
+    },
+    {
+      "transform": "blur",
+      "params": {
+        "kernel": 3,
+        "sigma": 0.8
+      },
+      "score": 0.9692984223365784,
+      "difference": 0.010184705257415771,
+      "stability": 0.9898152947425842
+    },
+    {
+      "transform": "jpeg_compression",
+      "params": {
+        "quality": 75
+      },
+      "score": 0.9385994672775269,
+      "difference": 0.040883660316467285,
+      "stability": 0.9591163396835327
+    },
+    {
+      "transform": "brightness",
+      "params": {
+        "factor": 0.8
+      },
+      "score": 0.9747523665428162,
+      "difference": 0.0047307610511779785,
+      "stability": 0.995269238948822
+    }
+  ],
+  "overall_stability": 0.9811569303274155,
+  "interpretation": "Evidence appears stable under tested transformations."
+}

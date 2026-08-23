@@ -1,0 +1,85 @@
+{
+  "case": {
+    "case_id": "SG-20260823-3102",
+    "filename": "01_02__meeting_serious__YVGY8LOK.mp4",
+    "sha256": "00b1565e2e0816e32f7b552bab09e1cec49b82d3550ef25bfa8c604d100f7c44",
+    "size_bytes": 6745903,
+    "analysis_timestamp": "2026-08-23T02:31:02.627528"
+  },
+  "video": {
+    "fps": 24.0,
+    "frame_count": 1044,
+    "duration_seconds": 43.5,
+    "width": 1920,
+    "height": 1080,
+    "codec": "h264"
+  },
+  "model": {
+    "architecture": "Xception",
+    "checkpoint": "models/xception_best.pth",
+    "device": "cpu",
+    "input_size": 224,
+    "parameters": 20811050
+  },
+  "preprocessing": {
+    "sampled_frames": 87,
+    "faces_detected": 87,
+    "usable_face_frames": 85,
+    "face_coverage": 0.9770114942528736,
+    "average_face_quality": 0.47287531959177403
+  },
+  "detection": {
+    "mean_score": 0.5250067724901087,
+    "median_score": 0.5348606109619141,
+    "max_score": 0.6945984959602356,
+    "std_score": 0.08394881566666589,
+    "raw_median_score": 0.5348606109619141,
+    "weighted_mean_score": 0.5232993596308765,
+    "weighted_median_score": 0.5333885550498962,
+    "weighted_std_score": 0.0860887925547884,
+    "min_frame_weight": 0.36428393391406244,
+    "max_frame_weight": 0.5548237457647875,
+    "mean_frame_weight": 0.47287531959177403,
+    "frame_predictions": []
+  },
+  "evidence": {
+    "consistency": 0.8278224148904232,
+    "reliability": 0.7558071093127535,
+    "confidence": 0.4031388619327686
+  },
+  "decision": {
+    "verdict": "INCONCLUSIVE",
+    "reason_codes": [
+      "QUALITY_WEIGHTED_AGGREGATION",
+      "HIGH_CONSISTENCY",
+      "HIGH_FACE_COVERAGE",
+      "LOW_FACE_QUALITY",
+      "BOUNDARY_ARTIFACT_EVIDENCE",
+      "FREQUENCY_ANOMALY_EVIDENCE",
+      "BLINK_NATURALNESS_MEASURED",
+      "IDENTITY_STABILITY_MEASURED",
+      "HIGH_RELIABILITY"
+    ]
+  },
+  "suspicious": {
+    "frames": [],
+    "segments": []
+  },
+  "explainability": {
+    "attributions": []
+  },
+  "robustness": {
+    "tests": [],
+    "overall_stability": 0
+  },
+  "limitations": [
+    "Analysis uses a single frame-level neural network detector.",
+    "No explicit frequency-domain analysis was performed.",
+    "No boundary artifact detection was performed.",
+    "No temporal consistency modeling (TCN) was applied.",
+    "No identity consistency verification was performed.",
+    "Evidence confidence is a transparent heuristic, not a calibrated probability.",
+    "Cross-dataset generalization has not been established.",
+    "Robustness testing covers only a limited set of common transformations."
+  ]
+}

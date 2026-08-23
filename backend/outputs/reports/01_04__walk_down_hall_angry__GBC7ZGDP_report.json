@@ -1,0 +1,225 @@
+{
+  "case": {
+    "case_id": "SG-20260823-3907",
+    "filename": "01_04__walk_down_hall_angry__GBC7ZGDP.mp4",
+    "sha256": "a2d8f0889bcdc37359914eaf6141db64b00c912387fcc9a768d4cf5f19151199",
+    "size_bytes": 1212172,
+    "analysis_timestamp": "2026-08-23T00:39:07.474554"
+  },
+  "video": {
+    "fps": 24.0,
+    "frame_count": 224,
+    "duration_seconds": 9.333333333333334,
+    "width": 1920,
+    "height": 1080,
+    "codec": "h264"
+  },
+  "model": {
+    "architecture": "Xception",
+    "checkpoint": "models/xception_best.pth",
+    "device": "cpu",
+    "input_size": 224,
+    "parameters": 20811050
+  },
+  "preprocessing": {
+    "sampled_frames": 19,
+    "faces_detected": 19,
+    "usable_face_frames": 17,
+    "face_coverage": 0.8947368421052632,
+    "average_face_quality": 0.5572273318994307
+  },
+  "detection": {
+    "mean_score": 0.9513566529049593,
+    "median_score": 0.9794831275939941,
+    "max_score": 0.9979885816574097,
+    "std_score": 0.07245268462792583,
+    "raw_median_score": 0.9794831275939941,
+    "weighted_mean_score": 0.953235439819678,
+    "weighted_median_score": 0.9794831275939941,
+    "weighted_std_score": 0.07085254270531635,
+    "min_frame_weight": 0.5142324557839607,
+    "max_frame_weight": 0.5755381347802199,
+    "mean_frame_weight": 0.5572273318994307,
+    "frame_predictions": []
+  },
+  "evidence": {
+    "consistency": 0.8582949145893672,
+    "reliability": 0.765675935278453,
+    "confidence": 0.7499666598099958
+  },
+  "decision": {
+    "verdict": "LIKELY_DEEPFAKE",
+    "reason_codes": [
+      "QUALITY_WEIGHTED_AGGREGATION",
+      "HIGH_MANIPULATION_SIGNAL",
+      "HIGH_CONSISTENCY",
+      "HIGH_FACE_COVERAGE",
+      "BOUNDARY_ARTIFACT_EVIDENCE",
+      "FREQUENCY_ANOMALY_EVIDENCE",
+      "BLINK_NATURALNESS_MEASURED",
+      "IDENTITY_STABILITY_MEASURED",
+      "ROBUSTNESS_STABILITY_MEASURED",
+      "LOCALIZED_EVIDENCE",
+      "HIGH_RELIABILITY",
+      "EVIDENCE_CONFIDENCE_HIGH"
+    ]
+  },
+  "suspicious": {
+    "frames": [
+      {
+        "frame_index": 144,
+        "timestamp_seconds": 6.0,
+        "score": 0.9979885816574097,
+        "face_quality": 0.5683163399517666,
+        "weight": 0.5683163399517666,
+        "face_path": "outputs\\faces\\01_04__walk_down_hall_angry__GBC7ZGDP\\frame_000144.jpg"
+      },
+      {
+        "frame_index": 168,
+        "timestamp_seconds": 7.0,
+        "score": 0.9938231706619263,
+        "face_quality": 0.5572269854120149,
+        "weight": 0.5572269854120149,
+        "face_path": "outputs\\faces\\01_04__walk_down_hall_angry__GBC7ZGDP\\frame_000168.jpg"
+      },
+      {
+        "frame_index": 48,
+        "timestamp_seconds": 2.0,
+        "score": 0.9925132393836975,
+        "face_quality": 0.5755381347802199,
+        "weight": 0.5755381347802199,
+        "face_path": "outputs\\faces\\01_04__walk_down_hall_angry__GBC7ZGDP\\frame_000048.jpg"
+      },
+      {
+        "frame_index": 72,
+        "timestamp_seconds": 3.0,
+        "score": 0.9893916845321655,
+        "face_quality": 0.5737880733768677,
+        "weight": 0.5737880733768677,
+        "face_path": "outputs\\faces\\01_04__walk_down_hall_angry__GBC7ZGDP\\frame_000072.jpg"
+      },
+      {
+        "frame_index": 96,
+        "timestamp_seconds": 4.0,
+        "score": 0.9874603748321533,
+        "face_quality": 0.5656819025088667,
+        "weight": 0.5656819025088667,
+        "face_path": "outputs\\faces\\01_04__walk_down_hall_angry__GBC7ZGDP\\frame_000096.jpg"
+      }
+    ],
+    "segments": [
+      {
+        "start": 1.0,
+        "end": 9.0,
+        "duration": 8.0,
+        "frame_count": 17,
+        "peak_score": 0.9979885816574097,
+        "mean_score": 0.9513566529049593
+      }
+    ]
+  },
+  "explainability": {
+    "attributions": [
+      {
+        "frame_index": 144,
+        "timestamp_seconds": 6.0,
+        "score": 0.9979885816574097,
+        "heatmap_path": "outputs\\explanations\\01_04__walk_down_hall_angry__GBC7ZGDP\\frame_000144_heatmap.jpg",
+        "overlay_path": "outputs\\explanations\\01_04__walk_down_hall_angry__GBC7ZGDP\\frame_000144_overlay.jpg",
+        "original_path": "outputs\\explanations\\01_04__walk_down_hall_angry__GBC7ZGDP\\frame_000144_original.jpg"
+      },
+      {
+        "frame_index": 168,
+        "timestamp_seconds": 7.0,
+        "score": 0.9938231706619263,
+        "heatmap_path": "outputs\\explanations\\01_04__walk_down_hall_angry__GBC7ZGDP\\frame_000168_heatmap.jpg",
+        "overlay_path": "outputs\\explanations\\01_04__walk_down_hall_angry__GBC7ZGDP\\frame_000168_overlay.jpg",
+        "original_path": "outputs\\explanations\\01_04__walk_down_hall_angry__GBC7ZGDP\\frame_000168_original.jpg"
+      },
+      {
+        "frame_index": 48,
+        "timestamp_seconds": 2.0,
+        "score": 0.9925132393836975,
+        "heatmap_path": "outputs\\explanations\\01_04__walk_down_hall_angry__GBC7ZGDP\\frame_000048_heatmap.jpg",
+        "overlay_path": "outputs\\explanations\\01_04__walk_down_hall_angry__GBC7ZGDP\\frame_000048_overlay.jpg",
+        "original_path": "outputs\\explanations\\01_04__walk_down_hall_angry__GBC7ZGDP\\frame_000048_original.jpg"
+      },
+      {
+        "frame_index": 72,
+        "timestamp_seconds": 3.0,
+        "score": 0.9893916845321655,
+        "heatmap_path": "outputs\\explanations\\01_04__walk_down_hall_angry__GBC7ZGDP\\frame_000072_heatmap.jpg",
+        "overlay_path": "outputs\\explanations\\01_04__walk_down_hall_angry__GBC7ZGDP\\frame_000072_overlay.jpg",
+        "original_path": "outputs\\explanations\\01_04__walk_down_hall_angry__GBC7ZGDP\\frame_000072_original.jpg"
+      },
+      {
+        "frame_index": 96,
+        "timestamp_seconds": 4.0,
+        "score": 0.9874603748321533,
+        "heatmap_path": "outputs\\explanations\\01_04__walk_down_hall_angry__GBC7ZGDP\\frame_000096_heatmap.jpg",
+        "overlay_path": "outputs\\explanations\\01_04__walk_down_hall_angry__GBC7ZGDP\\frame_000096_overlay.jpg",
+        "original_path": "outputs\\explanations\\01_04__walk_down_hall_angry__GBC7ZGDP\\frame_000096_original.jpg"
+      },
+      {
+        "frame_index": 156,
+        "timestamp_seconds": 6.5,
+        "score": 0.9866151809692383,
+        "heatmap_path": "outputs\\explanations\\01_04__walk_down_hall_angry__GBC7ZGDP\\frame_000156_heatmap.jpg",
+        "overlay_path": "outputs\\explanations\\01_04__walk_down_hall_angry__GBC7ZGDP\\frame_000156_overlay.jpg",
+        "original_path": "outputs\\explanations\\01_04__walk_down_hall_angry__GBC7ZGDP\\frame_000156_original.jpg"
+      }
+    ]
+  },
+  "robustness": {
+    "tests": [
+      {
+        "transform": "resize",
+        "params": {
+          "scale": 0.75
+        },
+        "score": 0.959909975528717,
+        "difference": 0.0195731520652771,
+        "stability": 0.9804268479347229
+      },
+      {
+        "transform": "blur",
+        "params": {
+          "kernel": 3,
+          "sigma": 0.8
+        },
+        "score": 0.9692984223365784,
+        "difference": 0.010184705257415771,
+        "stability": 0.9898152947425842
+      },
+      {
+        "transform": "jpeg_compression",
+        "params": {
+          "quality": 75
+        },
+        "score": 0.9385994672775269,
+        "difference": 0.040883660316467285,
+        "stability": 0.9591163396835327
+      },
+      {
+        "transform": "brightness",
+        "params": {
+          "factor": 0.8
+        },
+        "score": 0.9747523665428162,
+        "difference": 0.0047307610511779785,
+        "stability": 0.995269238948822
+      }
+    ],
+    "overall_stability": 0.9811569303274155
+  },
+  "limitations": [
+    "Analysis uses a single frame-level neural network detector.",
+    "No explicit frequency-domain analysis was performed.",
+    "No boundary artifact detection was performed.",
+    "No temporal consistency modeling (TCN) was applied.",
+    "No identity consistency verification was performed.",
+    "Evidence confidence is a transparent heuristic, not a calibrated probability.",
+    "Cross-dataset generalization has not been established.",
+    "Robustness testing covers only a limited set of common transformations."
+  ]
+}

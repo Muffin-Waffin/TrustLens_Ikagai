@@ -1,0 +1,110 @@
+{
+  "video_id": "02_18__walk_down_hall_angry__B95S4G6F",
+  "verdict": "LIKELY_DEEPFAKE",
+  "manipulation_score": 0.9590914249420166,
+  "mean_score": 0.9314402972950655,
+  "median_score": 0.9590914249420166,
+  "max_score": 0.978195309638977,
+  "std_score": 0.06742754618090158,
+  "raw_median_score": 0.9590914249420166,
+  "weighted_mean_score": 0.9344013533769349,
+  "weighted_median_score": 0.9590914249420166,
+  "weighted_std_score": 0.06428280310949062,
+  "min_frame_weight": 0.5270310705052099,
+  "max_frame_weight": 0.6747699737103634,
+  "mean_frame_weight": 0.6194215325958945,
+  "average_boundary_score": 0.2561124109754375,
+  "average_frequency_anomaly": 0.0,
+  "blink_naturalness_score": 0.4123085271023625,
+  "identity_drift_score": 0.9529509983144,
+  "robustness_stability_score": null,
+  "signal_coverage": {
+    "boundary": 17,
+    "frequency": 17,
+    "blink": 17,
+    "identity": 17
+  },
+  "consistency": 0.8714343937810187,
+  "frame_coverage": 0.8947368421052632,
+  "average_face_quality": 0.6194215325958945,
+  "reliability": 0.7913857492797107,
+  "evidence_confidence": 0.7590112859554833,
+  "sampled_frames": 19,
+  "usable_frames": 17,
+  "suspicious_frames": [
+    {
+      "frame_index": 120,
+      "timestamp_seconds": 5.0,
+      "score": 0.978195309638977,
+      "face_quality": 0.6427691689550565,
+      "weight": 0.6427691689550565,
+      "face_path": "outputs\\faces\\02_18__walk_down_hall_angry__B95S4G6F\\frame_000120.jpg"
+    },
+    {
+      "frame_index": 96,
+      "timestamp_seconds": 4.0,
+      "score": 0.973788321018219,
+      "face_quality": 0.640162059273752,
+      "weight": 0.640162059273752,
+      "face_path": "outputs\\faces\\02_18__walk_down_hall_angry__B95S4G6F\\frame_000096.jpg"
+    },
+    {
+      "frame_index": 84,
+      "timestamp_seconds": 3.5,
+      "score": 0.9734809398651123,
+      "face_quality": 0.6434512109113559,
+      "weight": 0.6434512109113559,
+      "face_path": "outputs\\faces\\02_18__walk_down_hall_angry__B95S4G6F\\frame_000084.jpg"
+    },
+    {
+      "frame_index": 168,
+      "timestamp_seconds": 7.0,
+      "score": 0.9695852398872375,
+      "face_quality": 0.6734484797513127,
+      "weight": 0.6734484797513127,
+      "face_path": "outputs\\faces\\02_18__walk_down_hall_angry__B95S4G6F\\frame_000168.jpg"
+    },
+    {
+      "frame_index": 180,
+      "timestamp_seconds": 7.5,
+      "score": 0.9627231359481812,
+      "face_quality": 0.667420868776448,
+      "weight": 0.667420868776448,
+      "face_path": "outputs\\faces\\02_18__walk_down_hall_angry__B95S4G6F\\frame_000180.jpg"
+    }
+  ],
+  "suspicious_segments": [
+    {
+      "start": 1.0,
+      "end": 9.0,
+      "duration": 8.0,
+      "frame_count": 17,
+      "peak_score": 0.978195309638977,
+      "mean_score": 0.9314402972950655
+    }
+  ],
+  "explanations": [
+    "Raw median manipulation score was 0.959; the quality-weighted median was 0.959 (shift +0.000). Weighted mean was 0.934, weighted standard deviation was 0.064, and consistency was 0.871.",
+    "Multiple sampled face frames produced elevated manipulation scores.",
+    "Scores clustered tightly across the usable frames (weighted mean 0.93, weighted std 0.06), giving a consistency score of 0.87.",
+    "A high proportion of sampled frames contained usable facial evidence.",
+    "Boundary artifact evidence was measured at 0.256.",
+    "Frequency anomaly evidence was measured at 0.000.",
+    "Blink naturalness was measured at 0.412.",
+    "Identity stability was measured at 0.953.",
+    "The suspicious evidence is concentrated within a localized time segment (1.0-9.0 seconds)."
+  ],
+  "reason_codes": [
+    "QUALITY_WEIGHTED_AGGREGATION",
+    "HIGH_MANIPULATION_SIGNAL",
+    "HIGH_CONSISTENCY",
+    "HIGH_FACE_COVERAGE",
+    "BOUNDARY_ARTIFACT_EVIDENCE",
+    "FREQUENCY_ANOMALY_EVIDENCE",
+    "BLINK_NATURALNESS_MEASURED",
+    "IDENTITY_STABILITY_MEASURED",
+    "LOCALIZED_EVIDENCE",
+    "HIGH_RELIABILITY",
+    "EVIDENCE_CONFIDENCE_HIGH"
+  ]
+}

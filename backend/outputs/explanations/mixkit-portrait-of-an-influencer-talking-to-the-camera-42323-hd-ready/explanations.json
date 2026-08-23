@@ -1,0 +1,55 @@
+{
+  "video_id": "mixkit-portrait-of-an-influencer-talking-to-the-camera-42323-hd-ready",
+  "explanations": [
+    {
+      "frame_index": 276,
+      "timestamp_seconds": 11.5115,
+      "score": 0.9236412048339844,
+      "heatmap_path": "outputs\\explanations\\mixkit-portrait-of-an-influencer-talking-to-the-camera-42323-hd-ready\\frame_000276_heatmap.jpg",
+      "overlay_path": "outputs\\explanations\\mixkit-portrait-of-an-influencer-talking-to-the-camera-42323-hd-ready\\frame_000276_overlay.jpg",
+      "original_path": "outputs\\explanations\\mixkit-portrait-of-an-influencer-talking-to-the-camera-42323-hd-ready\\frame_000276_original.jpg"
+    },
+    {
+      "frame_index": 216,
+      "timestamp_seconds": 9.008999999999999,
+      "score": 0.7260183691978455,
+      "heatmap_path": "outputs\\explanations\\mixkit-portrait-of-an-influencer-talking-to-the-camera-42323-hd-ready\\frame_000216_heatmap.jpg",
+      "overlay_path": "outputs\\explanations\\mixkit-portrait-of-an-influencer-talking-to-the-camera-42323-hd-ready\\frame_000216_overlay.jpg",
+      "original_path": "outputs\\explanations\\mixkit-portrait-of-an-influencer-talking-to-the-camera-42323-hd-ready\\frame_000216_original.jpg"
+    },
+    {
+      "frame_index": 264,
+      "timestamp_seconds": 11.011,
+      "score": 0.700843334197998,
+      "heatmap_path": "outputs\\explanations\\mixkit-portrait-of-an-influencer-talking-to-the-camera-42323-hd-ready\\frame_000264_heatmap.jpg",
+      "overlay_path": "outputs\\explanations\\mixkit-portrait-of-an-influencer-talking-to-the-camera-42323-hd-ready\\frame_000264_overlay.jpg",
+      "original_path": "outputs\\explanations\\mixkit-portrait-of-an-influencer-talking-to-the-camera-42323-hd-ready\\frame_000264_original.jpg"
+    },
+    {
+      "frame_index": 288,
+      "timestamp_seconds": 12.011999999999999,
+      "score": 0.6998646259307861,
+      "heatmap_path": "outputs\\explanations\\mixkit-portrait-of-an-influencer-talking-to-the-camera-42323-hd-ready\\frame_000288_heatmap.jpg",
+      "overlay_path": "outputs\\explanations\\mixkit-portrait-of-an-influencer-talking-to-the-camera-42323-hd-ready\\frame_000288_overlay.jpg",
+      "original_path": "outputs\\explanations\\mixkit-portrait-of-an-influencer-talking-to-the-camera-42323-hd-ready\\frame_000288_original.jpg"
+    },
+    {
+      "frame_index": 84,
+      "timestamp_seconds": 3.5035,
+      "score": 0.6916349530220032,
+      "heatmap_path": "outputs\\explanations\\mixkit-portrait-of-an-influencer-talking-to-the-camera-42323-hd-ready\\frame_000084_heatmap.jpg",
+      "overlay_path": "outputs\\explanations\\mixkit-portrait-of-an-influencer-talking-to-the-camera-42323-hd-ready\\frame_000084_overlay.jpg",
+      "original_path": "outputs\\explanations\\mixkit-portrait-of-an-influencer-talking-to-the-camera-42323-hd-ready\\frame_000084_original.jpg"
+    },
+    {
+      "frame_index": 12,
+      "timestamp_seconds": 0.5005,
+      "score": 0.6775126457214355,
+      "heatmap_path": "outputs\\explanations\\mixkit-portrait-of-an-influencer-talking-to-the-camera-42323-hd-ready\\frame_000012_heatmap.jpg",
+      "overlay_path": "outputs\\explanations\\mixkit-portrait-of-an-influencer-talking-to-the-camera-42323-hd-ready\\frame_000012_overlay.jpg",
+      "original_path": "outputs\\explanations\\mixkit-portrait-of-an-influencer-talking-to-the-camera-42323-hd-ready\\frame_000012_original.jpg"
+    }
+  ],
+  "method": "Grad-CAM",
+  "target_layer": "conv4.pointwise"
+}

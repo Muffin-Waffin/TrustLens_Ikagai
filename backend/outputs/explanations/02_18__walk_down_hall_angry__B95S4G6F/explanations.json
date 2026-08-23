@@ -1,0 +1,55 @@
+{
+  "video_id": "02_18__walk_down_hall_angry__B95S4G6F",
+  "explanations": [
+    {
+      "frame_index": 120,
+      "timestamp_seconds": 5.0,
+      "score": 0.978195309638977,
+      "heatmap_path": "outputs\\explanations\\02_18__walk_down_hall_angry__B95S4G6F\\frame_000120_heatmap.jpg",
+      "overlay_path": "outputs\\explanations\\02_18__walk_down_hall_angry__B95S4G6F\\frame_000120_overlay.jpg",
+      "original_path": "outputs\\explanations\\02_18__walk_down_hall_angry__B95S4G6F\\frame_000120_original.jpg"
+    },
+    {
+      "frame_index": 96,
+      "timestamp_seconds": 4.0,
+      "score": 0.973788321018219,
+      "heatmap_path": "outputs\\explanations\\02_18__walk_down_hall_angry__B95S4G6F\\frame_000096_heatmap.jpg",
+      "overlay_path": "outputs\\explanations\\02_18__walk_down_hall_angry__B95S4G6F\\frame_000096_overlay.jpg",
+      "original_path": "outputs\\explanations\\02_18__walk_down_hall_angry__B95S4G6F\\frame_000096_original.jpg"
+    },
+    {
+      "frame_index": 84,
+      "timestamp_seconds": 3.5,
+      "score": 0.9734809398651123,
+      "heatmap_path": "outputs\\explanations\\02_18__walk_down_hall_angry__B95S4G6F\\frame_000084_heatmap.jpg",
+      "overlay_path": "outputs\\explanations\\02_18__walk_down_hall_angry__B95S4G6F\\frame_000084_overlay.jpg",
+      "original_path": "outputs\\explanations\\02_18__walk_down_hall_angry__B95S4G6F\\frame_000084_original.jpg"
+    },
+    {
+      "frame_index": 168,
+      "timestamp_seconds": 7.0,
+      "score": 0.9695852398872375,
+      "heatmap_path": "outputs\\explanations\\02_18__walk_down_hall_angry__B95S4G6F\\frame_000168_heatmap.jpg",
+      "overlay_path": "outputs\\explanations\\02_18__walk_down_hall_angry__B95S4G6F\\frame_000168_overlay.jpg",
+      "original_path": "outputs\\explanations\\02_18__walk_down_hall_angry__B95S4G6F\\frame_000168_original.jpg"
+    },
+    {
+      "frame_index": 180,
+      "timestamp_seconds": 7.5,
+      "score": 0.9627231359481812,
+      "heatmap_path": "outputs\\explanations\\02_18__walk_down_hall_angry__B95S4G6F\\frame_000180_heatmap.jpg",
+      "overlay_path": "outputs\\explanations\\02_18__walk_down_hall_angry__B95S4G6F\\frame_000180_overlay.jpg",
+      "original_path": "outputs\\explanations\\02_18__walk_down_hall_angry__B95S4G6F\\frame_000180_original.jpg"
+    },
+    {
+      "frame_index": 72,
+      "timestamp_seconds": 3.0,
+      "score": 0.9620687961578369,
+      "heatmap_path": "outputs\\explanations\\02_18__walk_down_hall_angry__B95S4G6F\\frame_000072_heatmap.jpg",
+      "overlay_path": "outputs\\explanations\\02_18__walk_down_hall_angry__B95S4G6F\\frame_000072_overlay.jpg",
+      "original_path": "outputs\\explanations\\02_18__walk_down_hall_angry__B95S4G6F\\frame_000072_original.jpg"
+    }
+  ],
+  "method": "Grad-CAM",
+  "target_layer": "conv4.pointwise"
+}

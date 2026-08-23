@@ -1,0 +1,46 @@
+{
+  "video_id": "000",
+  "sha256": "0e51b9b46acc7eaeca62022e1b869541406d2ca887cd401dcc03cc5db28bc8ed",
+  "original_score": 0.45633384585380554,
+  "tests": [
+    {
+      "transform": "resize",
+      "params": {
+        "scale": 0.75
+      },
+      "score": 0.5051620602607727,
+      "difference": 0.04882821440696716,
+      "stability": 0.9511717855930328
+    },
+    {
+      "transform": "blur",
+      "params": {
+        "kernel": 3,
+        "sigma": 0.8
+      },
+      "score": 0.506267786026001,
+      "difference": 0.049933940172195435,
+      "stability": 0.9500660598278046
+    },
+    {
+      "transform": "jpeg_compression",
+      "params": {
+        "quality": 75
+      },
+      "score": 0.47064271569252014,
+      "difference": 0.0143088698387146,
+      "stability": 0.9856911301612854
+    },
+    {
+      "transform": "brightness",
+      "params": {
+        "factor": 0.8
+      },
+      "score": 0.32056987285614014,
+      "difference": 0.1357639729976654,
+      "stability": 0.8642360270023346
+    }
+  ],
+  "overall_stability": 0.9377912506461143,
+  "interpretation": "Evidence appears stable under tested transformations."
+}

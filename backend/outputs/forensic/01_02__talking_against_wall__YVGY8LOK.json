@@ -1,0 +1,111 @@
+{
+  "video_id": "01_02__talking_against_wall__YVGY8LOK",
+  "verdict": "LIKELY_DEEPFAKE",
+  "manipulation_score": 0.8815399408340454,
+  "mean_score": 0.865961276309591,
+  "median_score": 0.8815399408340454,
+  "max_score": 0.9587419033050537,
+  "std_score": 0.07506067905109653,
+  "raw_median_score": 0.8815399408340454,
+  "weighted_mean_score": 0.8667076728818606,
+  "weighted_median_score": 0.8815399408340454,
+  "weighted_std_score": 0.0744277710867186,
+  "min_frame_weight": 0.7122763374260945,
+  "max_frame_weight": 0.8028363100812891,
+  "mean_frame_weight": 0.7579276796654946,
+  "average_boundary_score": 0.28960970936806546,
+  "average_frequency_anomaly": 0.0,
+  "blink_naturalness_score": 0.36486130580100484,
+  "identity_drift_score": 0.9662070304678713,
+  "robustness_stability_score": null,
+  "signal_coverage": {
+    "boundary": 71,
+    "frequency": 71,
+    "blink": 71,
+    "identity": 71
+  },
+  "consistency": 0.8511444578265628,
+  "frame_coverage": 1.0,
+  "average_face_quality": 0.7579276796654946,
+  "reliability": 0.8706180252308919,
+  "evidence_confidence": 0.767484562451094,
+  "sampled_frames": 71,
+  "usable_frames": 71,
+  "suspicious_frames": [
+    {
+      "frame_index": 264,
+      "timestamp_seconds": 11.0,
+      "score": 0.9587419033050537,
+      "face_quality": 0.7361904625749978,
+      "weight": 0.7361904625749978,
+      "face_path": "outputs\\faces\\01_02__talking_against_wall__YVGY8LOK\\frame_000264.jpg"
+    },
+    {
+      "frame_index": 300,
+      "timestamp_seconds": 12.5,
+      "score": 0.9571285843849182,
+      "face_quality": 0.7404866645927978,
+      "weight": 0.7404866645927978,
+      "face_path": "outputs\\faces\\01_02__talking_against_wall__YVGY8LOK\\frame_000300.jpg"
+    },
+    {
+      "frame_index": 636,
+      "timestamp_seconds": 26.5,
+      "score": 0.9531641602516174,
+      "face_quality": 0.7738212608202273,
+      "weight": 0.7738212608202273,
+      "face_path": "outputs\\faces\\01_02__talking_against_wall__YVGY8LOK\\frame_000636.jpg"
+    },
+    {
+      "frame_index": 504,
+      "timestamp_seconds": 21.0,
+      "score": 0.9505020976066589,
+      "face_quality": 0.7831332829218423,
+      "weight": 0.7831332829218423,
+      "face_path": "outputs\\faces\\01_02__talking_against_wall__YVGY8LOK\\frame_000504.jpg"
+    },
+    {
+      "frame_index": 252,
+      "timestamp_seconds": 10.5,
+      "score": 0.9492133259773254,
+      "face_quality": 0.7579574177237475,
+      "weight": 0.7579574177237475,
+      "face_path": "outputs\\faces\\01_02__talking_against_wall__YVGY8LOK\\frame_000252.jpg"
+    }
+  ],
+  "suspicious_segments": [
+    {
+      "start": 0.0,
+      "end": 35.0,
+      "duration": 35.0,
+      "frame_count": 67,
+      "peak_score": 0.9587419033050537,
+      "mean_score": 0.8783240914344788
+    }
+  ],
+  "explanations": [
+    "Raw median manipulation score was 0.882; the quality-weighted median was 0.882 (shift +0.000). Weighted mean was 0.867, weighted standard deviation was 0.074, and consistency was 0.851.",
+    "Multiple sampled face frames produced elevated manipulation scores.",
+    "Scores clustered tightly across the usable frames (weighted mean 0.87, weighted std 0.07), giving a consistency score of 0.85.",
+    "A high proportion of sampled frames contained usable facial evidence.",
+    "Boundary artifact evidence was measured at 0.290.",
+    "Frequency anomaly evidence was measured at 0.000.",
+    "Blink naturalness was measured at 0.365.",
+    "Identity stability was measured at 0.966.",
+    "The suspicious evidence is concentrated within a localized time segment (0.0-35.0 seconds)."
+  ],
+  "reason_codes": [
+    "QUALITY_WEIGHTED_AGGREGATION",
+    "HIGH_MANIPULATION_SIGNAL",
+    "HIGH_CONSISTENCY",
+    "HIGH_FACE_COVERAGE",
+    "HIGH_FACE_QUALITY",
+    "BOUNDARY_ARTIFACT_EVIDENCE",
+    "FREQUENCY_ANOMALY_EVIDENCE",
+    "BLINK_NATURALNESS_MEASURED",
+    "IDENTITY_STABILITY_MEASURED",
+    "LOCALIZED_EVIDENCE",
+    "HIGH_RELIABILITY",
+    "EVIDENCE_CONFIDENCE_HIGH"
+  ]
+}

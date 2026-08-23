@@ -1,0 +1,1 @@
+# SynthGuard Backend Schemas Package

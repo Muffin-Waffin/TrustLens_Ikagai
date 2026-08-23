@@ -1,0 +1,173 @@
+{
+  "case": {
+    "case_id": "SG-20260823-5435",
+    "filename": "000.mp4",
+    "sha256": "0e51b9b46acc7eaeca62022e1b869541406d2ca887cd401dcc03cc5db28bc8ed",
+    "size_bytes": 894312,
+    "analysis_timestamp": "2026-08-23T03:54:35.514583"
+  },
+  "video": {
+    "fps": 25.0,
+    "frame_count": 396,
+    "duration_seconds": 15.84,
+    "width": 640,
+    "height": 480,
+    "codec": "h264"
+  },
+  "model": {
+    "architecture": "Xception",
+    "checkpoint": "models/xception_best.pth",
+    "device": "cpu",
+    "input_size": 224,
+    "parameters": 20811050
+  },
+  "preprocessing": {
+    "sampled_frames": 33,
+    "faces_detected": 33,
+    "usable_face_frames": 33,
+    "face_coverage": 1.0,
+    "average_face_quality": 0.8811931294202804
+  },
+  "detection": {
+    "mean_score": 0.4428809212915825,
+    "median_score": 0.45633384585380554,
+    "max_score": 0.5581675171852112,
+    "std_score": 0.07103435000306434,
+    "raw_median_score": 0.45633384585380554,
+    "weighted_mean_score": 0.44284015529068754,
+    "weighted_median_score": 0.45633384585380554,
+    "weighted_std_score": 0.07106822985500595,
+    "min_frame_weight": 0.8498623251914978,
+    "max_frame_weight": 0.9008703804016114,
+    "mean_frame_weight": 0.8811931294202804,
+    "frame_predictions": []
+  },
+  "evidence": {
+    "consistency": 0.8578635402899881,
+    "reliability": 0.9157766573840945,
+    "confidence": 0.41789988400722666
+  },
+  "decision": {
+    "verdict": "INCONCLUSIVE",
+    "reason_codes": [
+      "QUALITY_WEIGHTED_AGGREGATION",
+      "HIGH_CONSISTENCY",
+      "HIGH_FACE_COVERAGE",
+      "HIGH_FACE_QUALITY",
+      "BOUNDARY_ARTIFACT_EVIDENCE",
+      "FREQUENCY_ANOMALY_EVIDENCE",
+      "BLINK_NATURALNESS_MEASURED",
+      "IDENTITY_STABILITY_MEASURED",
+      "ROBUSTNESS_STABILITY_MEASURED",
+      "HIGH_RELIABILITY"
+    ]
+  },
+  "suspicious": {
+    "frames": [],
+    "segments": []
+  },
+  "explainability": {
+    "attributions": [
+      {
+        "frame_index": 300,
+        "timestamp_seconds": 12.0,
+        "score": 0.5581675171852112,
+        "heatmap_path": "outputs\\explanations\\000\\frame_000300_heatmap.jpg",
+        "overlay_path": "outputs\\explanations\\000\\frame_000300_overlay.jpg",
+        "original_path": "outputs\\explanations\\000\\frame_000300_original.jpg"
+      },
+      {
+        "frame_index": 276,
+        "timestamp_seconds": 11.04,
+        "score": 0.53831547498703,
+        "heatmap_path": "outputs\\explanations\\000\\frame_000276_heatmap.jpg",
+        "overlay_path": "outputs\\explanations\\000\\frame_000276_overlay.jpg",
+        "original_path": "outputs\\explanations\\000\\frame_000276_original.jpg"
+      },
+      {
+        "frame_index": 204,
+        "timestamp_seconds": 8.16,
+        "score": 0.5377219319343567,
+        "heatmap_path": "outputs\\explanations\\000\\frame_000204_heatmap.jpg",
+        "overlay_path": "outputs\\explanations\\000\\frame_000204_overlay.jpg",
+        "original_path": "outputs\\explanations\\000\\frame_000204_original.jpg"
+      },
+      {
+        "frame_index": 312,
+        "timestamp_seconds": 12.48,
+        "score": 0.5304981470108032,
+        "heatmap_path": "outputs\\explanations\\000\\frame_000312_heatmap.jpg",
+        "overlay_path": "outputs\\explanations\\000\\frame_000312_overlay.jpg",
+        "original_path": "outputs\\explanations\\000\\frame_000312_original.jpg"
+      },
+      {
+        "frame_index": 144,
+        "timestamp_seconds": 5.76,
+        "score": 0.5260956287384033,
+        "heatmap_path": "outputs\\explanations\\000\\frame_000144_heatmap.jpg",
+        "overlay_path": "outputs\\explanations\\000\\frame_000144_overlay.jpg",
+        "original_path": "outputs\\explanations\\000\\frame_000144_original.jpg"
+      },
+      {
+        "frame_index": 192,
+        "timestamp_seconds": 7.68,
+        "score": 0.5184320211410522,
+        "heatmap_path": "outputs\\explanations\\000\\frame_000192_heatmap.jpg",
+        "overlay_path": "outputs\\explanations\\000\\frame_000192_overlay.jpg",
+        "original_path": "outputs\\explanations\\000\\frame_000192_original.jpg"
+      }
+    ]
+  },
+  "robustness": {
+    "tests": [
+      {
+        "transform": "resize",
+        "params": {
+          "scale": 0.75
+        },
+        "score": 0.5051620602607727,
+        "difference": 0.04882821440696716,
+        "stability": 0.9511717855930328
+      },
+      {
+        "transform": "blur",
+        "params": {
+          "kernel": 3,
+          "sigma": 0.8
+        },
+        "score": 0.506267786026001,
+        "difference": 0.049933940172195435,
+        "stability": 0.9500660598278046
+      },
+      {
+        "transform": "jpeg_compression",
+        "params": {
+          "quality": 75
+        },
+        "score": 0.47064271569252014,
+        "difference": 0.0143088698387146,
+        "stability": 0.9856911301612854
+      },
+      {
+        "transform": "brightness",
+        "params": {
+          "factor": 0.8
+        },
+        "score": 0.32056987285614014,
+        "difference": 0.1357639729976654,
+        "stability": 0.8642360270023346
+      }
+    ],
+    "overall_stability": 0.9377912506461143
+  },
+  "limitations": [
+    "Analysis uses a single frame-level neural network detector.",
+    "No explicit frequency-domain analysis was performed.",
+    "No boundary artifact detection was performed.",
+    "No temporal consistency modeling (TCN) was applied.",
+    "No identity consistency verification was performed.",
+    "Evidence confidence is a transparent heuristic, not a calibrated probability.",
+    "Cross-dataset generalization has not been established.",
+    "Robustness testing covers only a limited set of common transformations."
+  ]
+}

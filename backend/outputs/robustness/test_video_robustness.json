@@ -1,0 +1,46 @@
+{
+  "video_id": "test_video",
+  "sha256": "31e3dc6fe70613fae0ebb9eb2c1be81f30e0e7c975971b036fdfe88eb1d2b4f2",
+  "original_score": 0.0,
+  "tests": [
+    {
+      "transform": "resize",
+      "params": {
+        "scale": 0.75
+      },
+      "score": 0.0,
+      "difference": 0.0,
+      "stability": 1.0
+    },
+    {
+      "transform": "blur",
+      "params": {
+        "kernel": 3,
+        "sigma": 0.8
+      },
+      "score": 0.0,
+      "difference": 0.0,
+      "stability": 1.0
+    },
+    {
+      "transform": "jpeg_compression",
+      "params": {
+        "quality": 75
+      },
+      "score": 0.0,
+      "difference": 0.0,
+      "stability": 1.0
+    },
+    {
+      "transform": "brightness",
+      "params": {
+        "factor": 0.8
+      },
+      "score": 0.0,
+      "difference": 0.0,
+      "stability": 1.0
+    }
+  ],
+  "overall_stability": 1.0,
+  "interpretation": "Evidence appears stable under tested transformations."
+}
